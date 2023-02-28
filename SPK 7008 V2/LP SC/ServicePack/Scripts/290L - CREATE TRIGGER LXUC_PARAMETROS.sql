@@ -1,0 +1,86 @@
+CREATE TRIGGER [dbo].[LXUC_PARAMETROS] 
+       ON [dbo].[PARAMETROS] 
+	   WITH ENCRYPTION 
+   FOR UPDATE  
+       AS	   		
+	            				
+BEGIN	 
+ 
+			DECLARE @MSG1 VARCHAR(MAX), @PARAMETRO1 VARCHAR(MAX)
+            DECLARE @MSG2 VARCHAR(MAX), @PARAMETRO2 VARCHAR(MAX)
+			DECLARE @MSG3 VARCHAR(MAX), @PARAMETRO3 VARCHAR(MAX)
+			DECLARE @MSG4 VARCHAR(MAX)
+
+			SET @MSG1 = '1'
+			SET @MSG2 = '1'
+			SET @MSG3 = '1'
+			SET @MSG4 = '1'
+	
+IF EXISTS(SELECT VALOR_ATUAL FROM INSERTED I WHERE TIPO_DADO = 'L' AND(UPPER(VALOR_ATUAL) NOT IN('.F.','.T.'))) AND APP_NAME() like ('%Microsoft SQL Server Management Studio%')
+					
+			SET @PARAMETRO1 = (SELECT TOP(1) PARAMETRO FROM INSERTED I 
+			WHERE TIPO_DADO = 'L' AND(UPPER(VALOR_ATUAL) NOT IN('.F.','.T.')))
+		
+            SET @MSG1 = 'ERRO AO ATUALIZAR O ('+ @PARAMETRO1 +'), O TIPO DE DADO É LOGICO E NÃO PODE SER PREENCHIDO COM VALOR DIFERENTE DE .T. OU .F. .'
+            		
+	    	       
+IF EXISTS(SELECT VALOR_ATUAL FROM INSERTED I 
+				WHERE TIPO_DADO = 'N' 
+				AND (ISNUMERIC(VALOR_ATUAL) = 0
+					OR VALOR_ATUAL like '% %' 
+					OR VALOR_ATUAL like '%,%' 
+					OR VALOR_ATUAL = ''))
+					AND APP_NAME() like ('%Microsoft SQL Server Management Studio%')
+					
+			SET @PARAMETRO2 = (SELECT TOP(1) PARAMETRO FROM INSERTED I
+				WHERE TIPO_DADO = 'N' 
+				AND (ISNUMERIC(VALOR_ATUAL) = 0
+					OR VALOR_ATUAL like '% %' 
+					OR VALOR_ATUAL like '%,%' 
+					OR VALOR_ATUAL = ''))
+
+			      SET @MSG2 = 'ERRO AO ATUALIZAR O ('+ @PARAMETRO2 +'), O TIPO DE DADO NUMERICO NÃO PODE CONTER CARACTERES.'  	      
+	
+IF EXISTS(SELECT VALOR_ATUAL FROM INSERTED I 
+					  WHERE TIPO_DADO = 'I' 
+						AND (ISNUMERIC(VALOR_ATUAL) = 0
+						OR VALOR_ATUAL like '% %' 
+					    OR VALOR_ATUAL like '%,%'  
+						OR VALOR_ATUAL like '%.%'
+						OR VALOR_ATUAL like '%-%'
+						OR VALOR_ATUAL = ''))				 
+				        AND APP_NAME() like ('%Microsoft SQL Server Management Studio%')
+
+				SET @PARAMETRO3 = (SELECT TOP(1) PARAMETRO FROM INSERTED I
+					  WHERE TIPO_DADO = 'I' 
+						AND (ISNUMERIC(VALOR_ATUAL) = 0
+						OR VALOR_ATUAL like '% %' 
+					    OR VALOR_ATUAL like '%,%'  
+						OR VALOR_ATUAL like '%.%'
+						OR VALOR_ATUAL like '%-%'
+						OR VALOR_ATUAL = ''))
+
+		SET @MSG3 = 'ERRO AO ATUALIZAR O ('+ @PARAMETRO3 +'), O TIPO DE DADO INTEIRO NÃO PODE CONTER CARACTERES.'	
+
+IF @MSG1 <> 1
+	SET @MSG4 = @MSG1
+ELSE
+IF @MSG2 <> 1
+	SET @MSG4 = @MSG2
+ELSE 
+IF @MSG3 <> 1
+	SET @MSG4 = @MSG3
+
+
+IF @MSG4 <> 1
+  RAISERROR(@MSG4, 16,1);
+            RETURN; 
+
+END	
+
+
+       
+
+
+
+

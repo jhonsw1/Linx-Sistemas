@@ -1,0 +1,4 @@
+	IF EXISTS (SELECT 1 FROM SYS.OBJECTS WHERE  NAME = 'FN_GetOrderInformation')
+	BEGIN 
+		DROP FUNCTION [DBO].[FN_GetOrderInformation] 
+	END 

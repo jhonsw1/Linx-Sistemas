@@ -1,0 +1,48 @@
+-- André Artuzo Inclusão de Parâmetro que habilita a inclusão de desconto manual no Showrooming 
+
+IF NOT EXISTS(SELECT parametro 
+              FROM   parametros 
+              WHERE  parametro = 'OMS_SHW_DESC_MANUAL') 
+  INSERT INTO dbo.parametros 
+              (parametro, 
+               penult_atualizacao, 
+               valor_default, 
+               ult_atualizacao, 
+               valor_atual, 
+               desc_parametro, 
+               tipo_dado, 
+               range_valor_atual, 
+               global, 
+               escopo, 
+               por_usuario_ok, 
+               nota_programador, 
+               permite_por_empresa, 
+               envia_para_loja, 
+               permite_por_loja, 
+               permite_por_terminal, 
+               permite_alterar_na_loja, 
+               permite_alterar_no_terminal, 
+               envia_para_representante, 
+               permite_por_representante, 
+               permite_alterar_no_representante) 
+  VALUES      ('OMS_SHW_DESC_MANUAL', 
+               '20210515', 
+               '.F.', 
+               '20210515', 
+               '.F.', 
+				'Habilita desconto manual na venda de pedidos Showrooming no PDV', 
+				'L', 
+				'', 
+				'0', 
+				'0', 
+				'0', 
+				'Habilita desconto manual na venda de pedidos Showrooming no PDV', 
+				'1', 
+				'1', 
+				'1', 
+				'0', 
+				'1', 
+				'0', 
+				'0', 
+				'0', 
+				'0' ) 

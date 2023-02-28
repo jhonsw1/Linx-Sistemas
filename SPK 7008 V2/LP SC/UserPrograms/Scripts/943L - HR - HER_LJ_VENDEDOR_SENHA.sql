@@ -1,0 +1,27 @@
+IF Object_id('DBO.HER_LJ_VENDEDOR_SENHA', 'U') IS NULL
+  BEGIN
+CREATE TABLE [dbo].[HER_LJ_VENDEDOR_SENHA](
+	[VENDEDOR] [char](4) NOT NULL,
+	[ID_SENHA] [tinyint] NOT NULL,
+	[DATA_SENHA] [datetime] NOT NULL,
+	[SENHA] [sysname] NOT NULL,
+ CONSTRAINT [XPKHER_LJ_VENDEDOR_SENHA] PRIMARY KEY CLUSTERED 
+(
+	[VENDEDOR] ASC,
+	[ID_SENHA] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+END
+
+
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_verify_versao_pos]') AND type in (N'P', N'PC'))
+BEGIN
+EXEC dbo.sp_executesql @statement = N'CREATE  procedure [dbo].[sp_verify_versao_pos]
+with encryption
+as
+begin	
+delete From PARAMETROS where PARAMETRO like ''PKT_LICENSE''
+delete From PARAMETROS where PARAMETRO = ''PKT_USA_DESC_100%''
+delete From PARAMETROS where PARAMETRO in(''PKT_BLOQTIPOCLI'',''PKT_LOJA_OPERACAO'',''PKT_LOJA_VENDA'',''PKT_PRE_VENDA'',''PKT_REABRE_PEDIDO'',''PKT_SEQUENCIAL'')
+end' 
+END

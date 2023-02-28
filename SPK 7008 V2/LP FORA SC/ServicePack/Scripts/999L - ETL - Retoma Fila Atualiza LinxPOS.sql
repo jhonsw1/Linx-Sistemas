@@ -1,0 +1,2 @@
+if EXISTS (select 1 from INFORMATION_SCHEMA.TABLES where TABLE_NAME = 'LJ_ETL_LOG')
+	exec LX_LJ_ETL_DESABILITA_FILA @LigaGeracaoFila=1

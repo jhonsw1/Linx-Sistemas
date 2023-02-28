@@ -1,0 +1,331 @@
+Create trigger [dbo].[LXU_CLIENTES_VAREJO] on [dbo].[CLIENTES_VAREJO] for UPDATE NOT FOR REPLICATION as
+-- 12/02/2014 - DIEGO CAMARGO - TP5054269 - #2# - Passou a inserir na tabela CLIENTES_VAREJO_LOG
+-- 08/05/2013 - jorge.damasco - TP3635987 - #1# - Atualização do campo LX_STATUS_CLIENTE para o ETL poder atualizar
+
+/* UPDATE trigger on CLIENTES_VAREJO */
+begin
+  declare  @numrows int,
+           @nullcnt int,
+           @validcnt int,
+           @insCODIGO_CLIENTE varchar(14),
+           @delCODIGO_CLIENTE varchar(14),
+           @errno   int,
+           @errmsg  varchar(255),
+		   @TipoVarejo varchar(25)
+
+  select @numrows = @@rowcount
+/* CLIENTE_VAR_CONCEITOS CONCEITO CLIENTES_VAREJO ON CHILD UPDATE RESTRICT */
+  if
+    update(CONCEITO)
+  begin
+    select @nullcnt = 0
+    select @validcnt = count(*)
+      from inserted,CLIENTE_VAR_CONCEITOS
+     where
+           inserted.CONCEITO = CLIENTE_VAR_CONCEITOS.CONCEITO
+    select @nullcnt = count(*) from inserted where
+      inserted.CONCEITO is null
+    if @validcnt + @nullcnt != @numrows
+    begin
+      select @errno  = 30007,
+             @errmsg = 'Impossível atualizar  "CLIENTES_VAREJO" porque "CLIENTE_VAR_CONCEITOS" não existe.'
+      goto error
+    end
+  end
+
+/* CLIENTE_VAR_BLOQ CLIENTE_VAL_BLOQUEIO CLIENTES_VAREJO ON CHILD UPDATE RESTRICT */
+  if
+    update(TIPO_BLOQUEIO)
+  begin
+    select @nullcnt = 0
+    select @validcnt = count(*)
+      from inserted,CLIENTE_VAR_BLOQ
+     where
+           inserted.TIPO_BLOQUEIO = CLIENTE_VAR_BLOQ.TIPO_BLOQUEIO
+    select @nullcnt = count(*) from inserted where
+      inserted.TIPO_BLOQUEIO is null
+    if @validcnt + @nullcnt != @numrows
+    begin
+      select @errno  = 30007,
+             @errmsg = 'Impossível atualizar  "CLIENTES_VAREJO" porque "CLIENTE_VAR_BLOQ" não existe.'
+      goto error
+    end
+  end
+
+/* CLIENTE_VAR_TIPOS CLIENTE_VAR_TIPOS CLIENTES_VAREJO ON CHILD UPDATE RESTRICT */
+
+select @TipoVarejo =  rtrim(ltrim(TIPO_VAREJO)) from inserted 
+  if
+    update(TIPO_VAREJO) and rtrim(ltrim(@TipoVarejo))<>'BLOQUEADO'
+  begin
+    select @nullcnt = 0
+    select @validcnt = count(*)
+      from inserted,CLIENTE_VAR_TIPOS
+     where
+           (inserted.TIPO_VAREJO = CLIENTE_VAR_TIPOS.TIPO_VAREJO)
+    select @nullcnt = count(*) from inserted where
+      inserted.TIPO_VAREJO is null
+if @validcnt + @nullcnt != @numrows
+    begin
+      select @errno  = 30007,
+             @errmsg = 'Impossível atualizar  "CLIENTES_VAREJO" porque "CLIENTE_VAR_TIPOS" não existe.'
+      goto error
+    end
+  end
+
+/* CLIENTE_VAR_PONT CLIENTE_VAR_PONT CLIENTES_VAREJO ON CHILD UPDATE RESTRICT */
+  if
+    update(PONTUALIDADE)
+  begin
+    select @nullcnt = 0
+    select @validcnt = count(*)
+      from inserted,CLIENTE_VAR_PONT
+     where
+           inserted.PONTUALIDADE = CLIENTE_VAR_PONT.PONTUALIDADE
+    select @nullcnt = count(*) from inserted where
+      inserted.PONTUALIDADE is null
+    if @validcnt + @nullcnt != @numrows
+    begin
+      select @errno  = 30007,
+             @errmsg = 'Impossível atualizar  "CLIENTES_VAREJO" porque "CLIENTE_VAR_PONT" não existe.'
+      goto error
+    end
+  end
+
+/* FILIAIS FILIAIS CLIENTES_VAREJO ON CHILD UPDATE RESTRICT */
+  if
+    update(FILIAL)
+  begin
+    select @nullcnt = 0
+    select @validcnt = count(*)
+      from inserted,FILIAIS
+     where
+           inserted.FILIAL = FILIAIS.FILIAL
+    
+    if @validcnt + @nullcnt != @numrows
+    begin
+      select @errno  = 30007,
+             @errmsg = 'Impossível atualizar  "CLIENTES_VAREJO" porque "FILIAIS" não existe.'
+      goto error
+    end
+  end
+
+/* LOJA_VENDEDORES VENDEDOR CLIENTES_VAREJO ON CHILD UPDATE RESTRICT */
+  if 
+     update(VENDEDOR)
+  begin
+    select @nullcnt = 0
+    select @validcnt = count(*)
+      from inserted,LOJA_VENDEDORES
+     where 
+           inserted.VENDEDOR = LOJA_VENDEDORES.VENDEDOR
+    select @nullcnt = count(*) from inserted where
+      inserted.VENDEDOR is null
+    if @validcnt + @nullcnt != @numrows
+    begin
+      select @errno  = 30007,
+             @errmsg = 'Impossível atualizar "CLIENTES_VAREJO" porque "LOJA_VENDEDORES" não existe.'
+      goto error
+    end
+  end
+
+/* CLIENTES_VAREJO R/1580 CLIENTE_VAR_RELACIONADO ON PARENT UPDATE CASCADE */
+  IF 
+     update(CODIGO_CLIENTE)
+  BEGIN
+    DECLARE CLIENTES_VAREJO1888 CURSOR FOR SELECT CODIGO_CLIENTE FROM INSERTED
+    DECLARE CLIENTES_VAREJO1109 CURSOR FOR SELECT CODIGO_CLIENTE FROM DELETED
+    OPEN CLIENTES_VAREJO1888
+    OPEN CLIENTES_VAREJO1109
+    FETCH NEXT FROM CLIENTES_VAREJO1888 INTO @insCODIGO_CLIENTE
+    FETCH NEXT FROM CLIENTES_VAREJO1109 INTO @delCODIGO_CLIENTE
+    IF @@rowcount >= 0
+    BEGIN
+      WHILE @@fetch_status = 0
+      BEGIN
+        UPDATE CLIENTE_VAR_RELACIONADO
+           SET CLIENTE_VAR_RELACIONADO.CODIGO_CLIENTE_RELACIONADO=@insCODIGO_CLIENTE
+   WHERE CLIENTE_VAR_RELACIONADO.CODIGO_CLIENTE_RELACIONADO = @delCODIGO_CLIENTE
+
+        FETCH NEXT FROM CLIENTES_VAREJO1888 INTO @insCODIGO_CLIENTE
+        FETCH NEXT FROM CLIENTES_VAREJO1109 INTO @delCODIGO_CLIENTE
+      END
+    END
+    CLOSE CLIENTES_VAREJO1888
+    CLOSE CLIENTES_VAREJO1109
+    DEALLOCATE CLIENTES_VAREJO1888
+    DEALLOCATE CLIENTES_VAREJO1109
+  END
+
+/* CLIENTES_VAREJO R/1579 CLIENTE_VAR_RELACIONADO ON PARENT UPDATE CASCADE */
+  IF 
+     update(CODIGO_CLIENTE)
+  BEGIN
+    DECLARE CLIENTES_VAREJO1887 CURSOR FOR SELECT CODIGO_CLIENTE FROM INSERTED
+    DECLARE CLIENTES_VAREJO1109 CURSOR FOR SELECT CODIGO_CLIENTE FROM DELETED
+    OPEN CLIENTES_VAREJO1887
+    OPEN CLIENTES_VAREJO1109
+    FETCH NEXT FROM CLIENTES_VAREJO1887 INTO @insCODIGO_CLIENTE
+    FETCH NEXT FROM CLIENTES_VAREJO1109 INTO @delCODIGO_CLIENTE
+    IF @@rowcount >= 0
+    BEGIN
+      WHILE @@fetch_status = 0
+      BEGIN
+        UPDATE CLIENTE_VAR_RELACIONADO
+           SET CLIENTE_VAR_RELACIONADO.CODIGO_CLIENTE=@insCODIGO_CLIENTE
+         WHERE CLIENTE_VAR_RELACIONADO.CODIGO_CLIENTE = @delCODIGO_CLIENTE
+
+        FETCH NEXT FROM CLIENTES_VAREJO1887 INTO @insCODIGO_CLIENTE
+        FETCH NEXT FROM CLIENTES_VAREJO1109 INTO @delCODIGO_CLIENTE
+      END
+    END
+    CLOSE CLIENTES_VAREJO1887
+    CLOSE CLIENTES_VAREJO1109
+    DEALLOCATE CLIENTES_VAREJO1887
+    DEALLOCATE CLIENTES_VAREJO1109
+  END
+
+/* CLIENTES_VAREJO R/1556 CLIENTE_VAR_SAC ON PARENT UPDATE CASCADE */
+  IF 
+     update(CODIGO_CLIENTE)
+  BEGIN
+    DECLARE CLIENTES_VAREJO1886 CURSOR FOR SELECT CODIGO_CLIENTE FROM INSERTED
+    DECLARE CLIENTES_VAREJO1109 CURSOR FOR SELECT CODIGO_CLIENTE FROM DELETED
+    OPEN CLIENTES_VAREJO1886
+    OPEN CLIENTES_VAREJO1109
+    FETCH NEXT FROM CLIENTES_VAREJO1886 INTO @insCODIGO_CLIENTE
+    FETCH NEXT FROM CLIENTES_VAREJO1109 INTO @delCODIGO_CLIENTE
+    IF @@rowcount >= 0
+    BEGIN
+      WHILE @@fetch_status = 0
+      BEGIN
+        UPDATE CLIENTE_VAR_SAC
+           SET CLIENTE_VAR_SAC.CODIGO_CLIENTE=@insCODIGO_CLIENTE
+         WHERE CLIENTE_VAR_SAC.CODIGO_CLIENTE = @delCODIGO_CLIENTE
+
+        FETCH NEXT FROM CLIENTES_VAREJO1886 INTO @insCODIGO_CLIENTE
+        FETCH NEXT FROM CLIENTES_VAREJO1109 INTO @delCODIGO_CLIENTE
+      END
+    END
+    CLOSE CLIENTES_VAREJO1886
+    CLOSE CLIENTES_VAREJO1109
+    DEALLOCATE CLIENTES_VAREJO1886
+    DEALLOCATE CLIENTES_VAREJO1109
+  END
+
+/* CLIENTES_VAREJO R/1395 LOJA_RESERVA ON PARENT UPDATE CASCADE */
+  IF 
+     update(CODIGO_CLIENTE)
+  BEGIN
+    DECLARE CLIENTES_VAREJO1885 CURSOR FOR SELECT CODIGO_CLIENTE FROM INSERTED
+    DECLARE CLIENTES_VAREJO1109 CURSOR FOR SELECT CODIGO_CLIENTE FROM DELETED
+    OPEN CLIENTES_VAREJO1885
+    OPEN CLIENTES_VAREJO1109
+    FETCH NEXT FROM CLIENTES_VAREJO1885 INTO @insCODIGO_CLIENTE
+    FETCH NEXT FROM CLIENTES_VAREJO1109 INTO @delCODIGO_CLIENTE
+    IF @@rowcount >= 0
+    BEGIN
+      WHILE @@fetch_status = 0
+      BEGIN
+        UPDATE LOJA_RESERVA
+           SET LOJA_RESERVA.CODIGO_CLIENTE=@insCODIGO_CLIENTE
+         WHERE LOJA_RESERVA.CODIGO_CLIENTE = @delCODIGO_CLIENTE
+
+        FETCH NEXT FROM CLIENTES_VAREJO1885 INTO @insCODIGO_CLIENTE
+        FETCH NEXT FROM CLIENTES_VAREJO1109 INTO @delCODIGO_CLIENTE
+      END
+    END
+    CLOSE CLIENTES_VAREJO1885
+    CLOSE CLIENTES_VAREJO1109
+    DEALLOCATE CLIENTES_VAREJO1885
+    DEALLOCATE CLIENTES_VAREJO1109
+  END
+
+/* CLIENTES_VAREJO R/1392 LOJA_PGTO_CLIENTE ON PARENT UPDATE CASCADE */
+  IF 
+     update(CODIGO_CLIENTE)
+  BEGIN
+    DECLARE CLIENTES_VAREJO1884 CURSOR FOR SELECT CODIGO_CLIENTE FROM INSERTED
+    DECLARE CLIENTES_VAREJO1109 CURSOR FOR SELECT CODIGO_CLIENTE FROM DELETED
+    OPEN CLIENTES_VAREJO1884
+    OPEN CLIENTES_VAREJO1109
+    FETCH NEXT FROM CLIENTES_VAREJO1884 INTO @insCODIGO_CLIENTE
+    FETCH NEXT FROM CLIENTES_VAREJO1109 INTO @delCODIGO_CLIENTE
+    IF @@rowcount >= 0
+    BEGIN
+      WHILE @@fetch_status = 0
+      BEGIN
+  UPDATE LOJA_PGTO_CLIENTE
+           SET LOJA_PGTO_CLIENTE.CODIGO_CLIENTE=@insCODIGO_CLIENTE
+         WHERE LOJA_PGTO_CLIENTE.CODIGO_CLIENTE = @delCODIGO_CLIENTE
+
+        FETCH NEXT FROM CLIENTES_VAREJO1884 INTO @insCODIGO_CLIENTE
+        FETCH NEXT FROM CLIENTES_VAREJO1109 INTO @delCODIGO_CLIENTE
+      END
+    END
+    CLOSE CLIENTES_VAREJO1884
+    CLOSE CLIENTES_VAREJO1109
+    DEALLOCATE CLIENTES_VAREJO1884
+    DEALLOCATE CLIENTES_VAREJO1109
+  END
+
+/* CLIENTES_VAREJO clientes_varejo LOJA_VENDA ON PARENT UPDATE CASCADE */
+  IF 
+     update(CODIGO_CLIENTE)
+  BEGIN
+    DECLARE CLIENTES_VAREJO1883 CURSOR FOR SELECT CODIGO_CLIENTE FROM INSERTED
+    DECLARE CLIENTES_VAREJO1109 CURSOR FOR SELECT CODIGO_CLIENTE FROM DELETED
+    OPEN CLIENTES_VAREJO1883
+    OPEN CLIENTES_VAREJO1109
+    FETCH NEXT FROM CLIENTES_VAREJO1883 INTO @insCODIGO_CLIENTE
+    FETCH NEXT FROM CLIENTES_VAREJO1109 INTO @delCODIGO_CLIENTE
+    IF @@rowcount >= 0
+    BEGIN
+      WHILE @@fetch_status = 0
+      BEGIN
+        UPDATE LOJA_VENDA
+           SET LOJA_VENDA.CODIGO_CLIENTE=@insCODIGO_CLIENTE
+         WHERE LOJA_VENDA.CODIGO_CLIENTE = @delCODIGO_CLIENTE
+
+        FETCH NEXT FROM CLIENTES_VAREJO1883 INTO @insCODIGO_CLIENTE
+        FETCH NEXT FROM CLIENTES_VAREJO1109 INTO @delCODIGO_CLIENTE
+      END
+    END
+    CLOSE CLIENTES_VAREJO1883
+    CLOSE CLIENTES_VAREJO1109
+    DEALLOCATE CLIENTES_VAREJO1883
+    DEALLOCATE CLIENTES_VAREJO1109
+  END
+		
+	    /*-- CLIENTES_VAREJO_LOG -----------------------------------------------------------------------------*/ --#2#     	    IF	UPDATE(CLIENTE_VAREJO) OR UPDATE(PF_PJ) OR UPDATE(RG_IE) OR UPDATE(CPF_CGC) OR UPDATE(TIPO_LOGRADOURO) OR 			UPDATE(ENDERECO) OR UPDATE(COMPLEMENTO) OR UPDATE(NUMERO) OR UPDATE(CEP) OR UPDATE(BAIRRO) OR UPDATE(CIDADE) OR			UPDATE(UF) OR UPDATE(PAIS) OR UPDATE(DDD) OR UPDATE(TELEFONE) OR UPDATE(EMAIL)	    BEGIN     			INSERT INTO	CLIENTES_VAREJO_LOG (DATA_ALTERACAO, CODIGO_CLIENTE, CLIENTE_VAREJO, PF_PJ, RG_IE, CPF_CGC, 						TIPO_LOGRADOURO, ENDERECO, COMPLEMENTO, NUMERO, CEP, BAIRRO, CIDADE, UF, PAIS, DDD, TELEFONE, EMAIL) 			(SELECT	GETDATE(), CODIGO_CLIENTE, CLIENTE_VAREJO, PF_PJ, RG_IE, CPF_CGC, TIPO_LOGRADOURO,					ENDERECO, COMPLEMENTO, NUMERO, CEP, BAIRRO, CIDADE, UF, PAIS, DDD, TELEFONE, EMAIL     			FROM	DELETED)    		END     	   /*-----------------------------------------------------------------------------------------------------*/ --#2# 
+		
+       /*---LINX-ETL------------------------------------------------------------------------------------------*/  
+         
+       IF NOT UPDATE(LX_STATUS_CLIENTE)  
+       BEGIN  
+              UPDATE  CLIENTES_VAREJO   
+              SET  LX_STATUS_CLIENTE  = 1, DATA_PARA_TRANSFERENCIA = inserted.DATA_PARA_TRANSFERENCIA
+             FROM  CLIENTES_VAREJO, INSERTED  
+              WHERE  CLIENTES_VAREJO.CODIGO_CLIENTE = INSERTED.CODIGO_CLIENTE   
+       END  
+       /*-----------------------------------------------------------------------------------------------------*/    
+                              
+       /*---LINX-UPDATE---------------------------------------------------------------------------------------*/  
+         
+       IF NOT UPDATE(DATA_PARA_TRANSFERENCIA)  
+       BEGIN  
+        UPDATE  CLIENTES_VAREJO   
+        SET  DATA_PARA_TRANSFERENCIA = GETDATE()  
+        FROM  CLIENTES_VAREJO, INSERTED  
+        WHERE  CLIENTES_VAREJO.CODIGO_CLIENTE = INSERTED.CODIGO_CLIENTE   
+         AND (INSERTED.DATA_PARA_TRANSFERENCIA IS NULL   
+         OR CLIENTES_VAREJO.DATA_PARA_TRANSFERENCIA = INSERTED.DATA_PARA_TRANSFERENCIA)  
+       END  
+       /*-----------------------------------------------------------------------------------------------------*/  
+ 
+
+  return
+error:
+    raiserror(@errmsg, 18, 1)
+    rollback transaction
+end

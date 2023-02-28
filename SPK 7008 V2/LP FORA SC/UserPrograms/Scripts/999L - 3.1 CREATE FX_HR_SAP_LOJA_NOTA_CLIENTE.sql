@@ -1,0 +1,226 @@
+CREATE FUNCTION [dbo].[FX_HR_SAP_LOJA_NOTA_CLIENTE]( @CHAVE_ORIGEM VARCHAR(40))
+ RETURNS @DADOSENTREGA TABLE      
+(  
+ CHAVE_ORIGEM VARCHAR (40),  
+ CODIGO_CLIENTE   varCHAR(14),      
+ CNPJ   CHAR(14),      
+ CPF   CHAR(11),      
+ CPF_CGC  CHAR(20),    
+ PF_PJ   bit,      
+ NOME_CLIENTE varchar(40),    
+ ENDERECO  varchar(60),    
+ LOGRADOURO  VARCHAR(90),      
+ COMPLEMENTO    VARCHAR(60),      
+ NUMERO   VARCHAR(60),      
+ BAIRRO         VARCHAR(35),      
+ CIDADE   VARCHAR(35),      
+ UF    CHAR(2),      
+ CEP            VARCHAR(9),      
+ DDD_TELEFONE   VARCHAR(5),      
+ TELEFONE       VARCHAR(10),       
+ DDD_CELULAR VARCHAR(5),     
+ CELULAR        VARCHAR(10),       
+ EMAIL_NFE  varchar(250),    
+ IE    VARCHAR(19)  ,    
+ FILIAL   varchar(25)    
+ )      
+    
+AS       
+
+-- HERING - Mandicaju (04/02/2022)- Ajuste retorno para fluxos processo 33 / Alterado tamanho do retorno do ENDERECO de 90 para 60
+-- HERING - Puehler (26/10/2021)  - Ajuste do campo NOME_CLIENTE no retorno, alterado de 35 para 40 (##LINX-393)
+-- HERING - Mandicaju (25/08/2021)- Ajuste retorno da CHAVE_ORIGEM para envio no RetailSync (##LINX-374)  
+-- HERING - MARCIO (20/08/2021)   - #05#  - JUNÇÃO DOS DOIS ENDERECOS PARA ENVIO NO RetailSync (##LINX-374)  
+-- HERING - João Paulo Machado    - #04#  - Ajuste do RG no caso de pessoa física  
+-- SEM DEMANDA - ANDRÉ ARTUZO     - #03# - (14/09/2018) - ADICIONADO CAMPO CPF_CGC E ALTERAÇÃO DOS CAMPOS NRO_ENTREGA.      
+-- SEM DEMANDA - MAYDSON HEDLUND  - #02# - (10/09/2018) - ADICIONADO CAMPO DDD E TELEFONE.      
+-- SEM DEMANDA - MAYDSON HEDLUND  - #01# - (10/09/2018) - ADICIONADO CAMPO CEP.      
+      
+BEGIN       
+  
+ DECLARE @CODIGO_CLIENTE VARCHAR(14)    
+ DECLARE @CODIGO_FILIAL        CHAR(6)      
+ DECLARE @TERMINAL             CHAR(3)      
+ DECLARE @LANCAMENTO_CAIXA     CHAR(7)      
+ DECLARE @TICKET               CHAR(8)      
+ DECLARE @CODIGO_FILIAL_ORIGEM CHAR(6)      
+ DECLARE @PEDIDO               INT      
+ DECLARE @DATA_VENDA           DATETIME      
+ DECLARE @ITEM_ENDERECO        CHAR(18)      
+ DECLARE @CPF_CGC              VARCHAR(14)    
+ declare @NOME_CLIENTE     varchar(25)    
+ DECLARE @PF_PJ                BIT      
+ DECLARE @ENDERECO             VARCHAR(60)      
+ DECLARE @ENDERECO_COMPLETO    VARCHAR(60)      
+ DECLARE @NROENTREGA           VARCHAR(10)      
+ DECLARE @CPLENTREGA           VARCHAR(60)      
+ DECLARE @BAIRROENTREGA       VARCHAR(35)      
+ DECLARE @CODMUNENTREGA       VARCHAR(10)      
+ DECLARE @MUNENTREGA           VARCHAR(35)      
+ DECLARE @UF                   CHAR(2)      
+ DECLARE @CEP                  VARCHAR(9)      
+ DECLARE @DDD     VARCHAR(5)      
+ DECLARE @TELEFONE    VARCHAR(10)       
+ DECLARE @DDD_CELULAR   VARCHAR(5)      
+ DECLARE @CELULAR    VARCHAR(10)       
+ declare @EMAIL_NFE    varchar(250)    
+ declare @IE     varchar(50)    
+ declare @FILIAL    varchar(25)    
+ DECLARE @POS                  INT      
+ DECLARE @TAM                  INT      
+ DECLARE @POSREAL              INT      
+ DECLARE @TB_ENDERECO          TABLE (ENDERECO VARCHAR(90))      
+       
+ SELECT @TERMINAL = TERMINAL, @LANCAMENTO_CAIXA = LANCAMENTO_CAIXA, @CODIGO_FILIAL = PGTO.CODIGO_FILIAL       
+ FROM LOJA_VENDA_PGTO PGTO       
+ WHERE PGTO.HR_SAP_CHAVE_NF_VENDA = @CHAVE_ORIGEM    
+      
+ SELECT @TICKET = TICKET ,@DATA_VENDA = DATA_VENDA, @CODIGO_CLIENTE = CODIGO_CLIENTE      
+ FROM LOJA_VENDA       
+ WHERE CODIGO_FILIAL = @CODIGO_FILIAL AND      
+   TERMINAL   = @TERMINAL AND      
+   LANCAMENTO_CAIXA = @LANCAMENTO_CAIXA      
+         
+ SELECT TOP 1 @PEDIDO = PEDIDO, @CODIGO_FILIAL_ORIGEM = CODIGO_FILIAL_ORIGEM       
+ FROM LOJA_PEDIDO_VENDA          
+ WHERE CODIGO_FILIAL = @CODIGO_FILIAL AND      
+   TICKET   = @TICKET AND      
+   DATA_VENDA = @DATA_VENDA      
+       
+ SELECT @ITEM_ENDERECO = ITEM_ENDERECO      
+ FROM LOJA_PEDIDO_ENTREGA      
+ WHERE CODIGO_FILIAL_ORIGEM = @CODIGO_FILIAL_ORIGEM AND       
+   PEDIDO = @PEDIDO AND       
+   SEQ_ENTREGA = 1      
+       
+ SELECT  @ENDERECO      = CLI_ENDERECO.ENDERECO,      
+   @NOME_CLIENTE = case when isnull(CLI_ENDERECO.NOME,'')!='' then CLI_ENDERECO.NOME else CLI_VAREJO.CLIENTE_VAREJO end,     
+   @NROENTREGA    = '',      
+   @CPLENTREGA    = CLI_ENDERECO.COMPLEMENTO,      
+   @BAIRROENTREGA = CLI_ENDERECO.BAIRRO,      
+   @CODMUNENTREGA = '',      
+   @MUNENTREGA    = CLI_ENDERECO.CIDADE,      
+   @UF            = CLI_ENDERECO.UF,      
+   @CPF_CGC       = CLI_VAREJO.CPF_CGC,      
+   @PF_PJ     = CLI_VAREJO.PF_PJ,      
+   @CEP           = CLI_ENDERECO.CEP,      
+   @DDD           = case when isnull(CLI_ENDERECO.TELEFONE,'')!='' then CLI_ENDERECO.DDD else CLI_VAREJO.DDD end,      
+   @TELEFONE      = case when isnull(CLI_ENDERECO.TELEFONE,'')!='' then CLI_ENDERECO.TELEFONE else CLI_VAREJO.TELEFONE end,    
+   @ddd_celular = CLI_VAREJO.DDD_CELULAR,    
+   @CELULAR = CLI_VAREJO.CELULAR,    
+   @EMAIL_NFE = ISNULL(CLI_VAREJO.EMAIL,''),    
+   @IE = CASE WHEN CLI_VAREJO.PF_PJ = 0 THEN CLI_VAREJO.RG_IE END,    
+   @FILIAL= CLI_VAREJO.FILIAL         
+ FROM CLIENTE_VAR_ENDERECOS CLI_ENDERECO      
+ INNER JOIN CLIENTES_VAREJO CLI_VAREJO ON      
+   CLI_ENDERECO.CODIGO_CLIENTE = CLI_VAREJO.CODIGO_CLIENTE      
+ WHERE CLI_ENDERECO.CODIGO_CLIENTE = @CODIGO_CLIENTE AND      
+   ITEM_ENDERECO = @ITEM_ENDERECO      
+       
+ insert into @TB_ENDERECO      
+ values (@ENDERECO)      
+      
+      
+ select  @ENDERECO_COMPLETO = ISNULL(ENDERECO, '') from @TB_ENDERECO      
+ SET @TAM = LEN(@ENDERECO_COMPLETO + '|') - 1      
+ SET @POS = CHARINDEX(',',REVERSE(@ENDERECO_COMPLETO))      
+ IF (@POS > 0)      
+ BEGIN      
+  SET @POSREAL = @TAM - @POS + 1      
+  SELECT @ENDERECO = RTRIM(LTRIM(SUBSTRING(@ENDERECO_COMPLETO, 1, @POSREAL - 1))), @NROENTREGA=  RTRIM(LTRIM(SUBSTRING(@ENDERECO_COMPLETO, @POSREAL + 1, @TAM - @POSREAL)))      
+ END      
+ ELSE      
+  SELECT @ENDERECO = RTRIM(LTRIM(@ENDERECO)), @NROENTREGA = NULL    --#3#      
+      
+  SELECT TOP 1 @CODMUNENTREGA = LCF_LX_MUNICIPIO.COD_MUNICIPIO_IBGE      
+   FROM   LCF_LX_MUNICIPIO (NOLOCK)      
+   INNER JOIN LCF_LX_UF U (NOLOCK)      
+   ON U.ID_UF = LCF_LX_MUNICIPIO.ID_UF      
+   WHERE  U.UF = @UF      
+   AND DBO.Fx_replace_caracter_especial_nfe(DEFAULT, DESC_MUNICIPIO) = DBO.Fx_replace_caracter_especial_nfe(DEFAULT, @MUNENTREGA)      
+  
+   IF ISNULL(@CPF_CGC ,'') = ''  
+   BEGIN  
+  SELECT    
+    @CHAVE_ORIGEM = b.CHAVE_ORIGEM,  
+ @CPF_CGC = a.CPF_CGC,  
+    @PF_PJ = a.PF_PJ,  
+    @NOME_CLIENTE = a.CLIENTE_VAREJO,  
+    @ENDERECO = a.ENDERECO,  
+    @CPLENTREGA = a.COMPLEMENTO,  
+    @NROENTREGA =  a.NUMERO,  
+    @BAIRROENTREGA = a.BAIRRO,  
+    @MUNENTREGA  = a.CIDADE,  
+    @UF = a.UF,  
+    @CEP = a.CEP,  
+    @DDD = a.DDD,  
+    @TELEFONE = a.TELEFONE,  
+    @DDD_CELULAR = a.DDD_CELULAR,  
+    @CELULAR = a.CELULAR,  
+    @EMAIL_NFE = a.EMAIL,  
+    @IE = CASE WHEN a.PF_PJ = 0 THEN a.RG_IE END,  
+    @FILIAL = a.FILIAL   
+  FROM CLIENTES_VAREJO (nolock) a  
+   inner join HR_SAP_LOJA_NOTA b on a.CODIGO_CLIENTE =b.CODIGO_CLIENTE and b.HR_LJ_NF_PROCESSO  in(31,33)-- #05#  
+ where b.CODIGO_CLIENTE= @CODIGO_CLIENTE and b.CHAVE_ORIGEM= @CHAVE_ORIGEM  
+  
+  
+   END  
+     
+   INSERT INTO @DADOSENTREGA(CHAVE_ORIGEM, CODIGO_CLIENTE, CNPJ, CPF,CPF_CGC, PF_PJ, NOME_CLIENTE, ENDERECO, LOGRADOURO,COMPLEMENTO, NUMERO, BAIRRO, CIDADE, UF, CEP, DDD_TELEFONE, TELEFONE, DDD_CELULAR, CELULAR,EMAIL_NFE, IE ,FILIAL)      
+    SELECT  
+  @CHAVE_ORIGEM,  
+  @CODIGO_CLIENTE,    
+     CASE WHEN @PF_PJ = 0 THEN  @CPF_CGC ELSE NULL END,       
+     CASE WHEN @PF_PJ = 1 THEN  @CPF_CGC ELSE NULL END,      
+        @CPF_CGC,    
+  @PF_PJ,    
+  @NOME_CLIENTE,    
+  @ENDERECO,    
+  null,       
+  @CPLENTREGA,      
+  @NROENTREGA,       
+  @BAIRROENTREGA,       
+  @MUNENTREGA,       
+  @UF,       
+  @CEP,      
+  @DDD,      
+  @TELEFONE,      
+  @DDD_CELULAR,       
+  @CELULAR,    
+  @EMAIL_NFE,     
+  @IE ,    
+  @FILIAL    
+  
+  delete @DADOSENTREGA where @NOME_CLIENTE is null --#05#  
+  
+  --- #05# --   
+ INSERT INTO @DADOSENTREGA(CHAVE_ORIGEM, CODIGO_CLIENTE, CNPJ, CPF,CPF_CGC, PF_PJ, NOME_CLIENTE, ENDERECO, LOGRADOURO,COMPLEMENTO, NUMERO, BAIRRO, CIDADE, UF, CEP, DDD_TELEFONE, TELEFONE, DDD_CELULAR, CELULAR,EMAIL_NFE, IE ,FILIAL)      
+          SELECT       
+      B.CHAVE_ORIGEM,  
+      a.CODIGO_CLIENTE  
+   ,CNPJ  
+   ,CPF  
+   ,CNPJ  
+   ,PF_PJ  
+   ,NOME_CLIENTE   
+   ,ENDERECO  
+   ,LOGRADOURO  
+   ,COMPLEMENTO   
+   ,NUMERO  
+   ,BAIRRO  
+   ,CIDADE   
+   ,UF   
+   ,CEP  
+   ,DDD_TELEFONE  
+   ,TELEFONE  
+   ,DDD_CELULAR  
+   ,CELULAR  
+   ,EMAIL_NFE  
+   ,IE  
+   ,FILIAL  
+  FROM dbo.W_HR_SAP_CLIENTES_VAREJO a  
+  inner join HR_SAP_LOJA_NOTA b on a.CODIGO_CLIENTE =b.CODIGO_CLIENTE and b.HR_LJ_NF_PROCESSO not in (31)
+  where b.CHAVE_ORIGEM= @CHAVE_ORIGEM  
+RETURN       
+END

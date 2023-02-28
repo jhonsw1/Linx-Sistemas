@@ -1,0 +1,1046 @@
+﻿{
+  "Assets": "Service Pack Componentes",
+  "DataDeCriacao": "2021-04-19T21:00:00.000Z",
+  "EXE": [
+    {
+      "Acao": [
+        "",
+        ""
+      ],
+      "Arguments": "",
+      "Nome": "",
+      "CaminhoOrigem": "",
+      "CaminhoDestino": ""
+    }
+  ],
+  "MSI": [
+    {
+      "Acao": [
+        "Instalar",
+        ""
+      ],
+      "Arguments": "/q",
+      "Nome": "LINXSERVICESCONTROLSETUP.MSI",
+      "CaminhoOrigem": "ServicePack\\MsiFiles",
+      "CaminhoDestino": "",
+      "Guid": "ccefdd71-9c34-4b27-b1ed-bcb08e9020a2"
+    }
+  ],
+  "ARQUIVOS": [
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "LINX.NFCE.FOXPRO.DLL.CONFIG",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Deletar",
+        "Copiar",
+        ""
+      ],
+      "Nome": "LINX.PROCESSAR.NOTAS.DLL.CONFIG",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "LINX.NFCE.FOXPRO.TLB",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "MotorSynthesis.TLB",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "LINX.PROCESSAR.NOTAS.TLB",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "Microsoft.AI.Agent.Intercept.dll",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "Microsoft.AI.DependencyCollector.dll",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "Microsoft.AI.DependencyCollector.xml",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "Microsoft.AI.PerfCounterCollector.dll",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "Microsoft.AI.PerfCounterCollector.xml",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "Microsoft.AI.ServerTelemetryChannel.dll",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "Microsoft.AI.ServerTelemetryChannel.xml",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "Microsoft.AI.WindowsServer.dll",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "Microsoft.AI.WindowsServer.xml",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "Microsoft.ApplicationInsights.dll",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "Microsoft.ApplicationInsights.xml",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "LINX.TOOLS.GENERICS.TLB",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "NERDLE.AUTOCONFIG.DLL",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "INTERFACEIEPSON.DLL",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "LinxPOS"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "LINXDTEF.TLB",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "LinxPOS"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "Linx.Orders.Management.tlb",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "LINX.POS1985.BO.TLB",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "LINX.ETL.INTEGRATION.TLB",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "LINXMOBCOMPONENTS.TLB",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "CliSiTef32I.dll",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "LinxPOS"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "libeay32.dll",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "LinxPOS"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "libemv.dll",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "LinxPOS"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "LinxPOSGenerateBin.TLB",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "Linx.Nfe.DanfeGenerator.DLL",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "Linx.Nfe.Extesions.DLL",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "Gma.QrCodeNet.Encoding.DLL",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "Newtonsoft.Json.dll",
+      "CaminhoOrigem": "ServicePack\\Modules\\LinxPOS",
+      "CaminhoDestino": "LinxPOS"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "Newtonsoft.Json.dll",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "LINX.OMS.TLB",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "LinxWishListService.tlb",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "LINX.OMS.Shw.TLB",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "Linx.License.Client.cfg",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "Linx.License.Client.dll",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "Linx.RLJ9000.BV.dll",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "Linx.RLJ9000.POS.dll",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "Linx.RLJ9000.POS.tlb",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "Linx.RLJ9000.SPE.dll",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "Linx.Tools.dll",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "LxEngSecurity.tlb",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "System.Net.Http.Formatting.dll",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "Linx.License.Client.cfg",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "Linx.License.Client.dll",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "Linx.RLJ9000.BV.dll",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "Linx.RLJ9000.POS.dll",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "Linx.RLJ9000.POS.tlb",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "Linx.RLJ9000.SPE.dll",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "Linx.Tools.dll",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "Unico.Framework.dll",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "lxlib.dat",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "LinxPOS"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "LinxM.tlb",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "LinxPOS"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "LinxB.tlb",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "LinxPOS"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "Dapper.dll",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "LinxPOS"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "LinxB.dll.config",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "LinxPOS"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "Linx.BlocoX.Transmissao.LinxPOS.dll",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "LinxPOS"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "Linx.BlocoX.Transmissao.LinxPOS.dll.config",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "LinxPOS"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "Serilog.dll",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "Serilog.Sinks.File.dll",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "Serilog.Sinks.File.xml",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "Serilog.xml",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "EntityFramework.dll",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "log4net.dll",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "zxing.presentation.dll",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "zxing.dll",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "Microsoft.Exchange.WebServices.Auth.dll",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "Microsoft.Exchange.WebServices.dll",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    }
+  ],
+  "DLL": [
+    {
+      "Acao": [
+        "Deletar",
+        "Copiar",
+        "Registrar"
+      ],
+      "TipoRegistro": "RegAsm",
+      "TipoInstalacao": "CODEBASE",
+      "Nome": "Linx.Orders.Management.dll",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared",
+      "DadosRegistry": {
+        "SubKey": "LinxOM",
+        "Valor": "DllRegistrada"
+      }
+    },
+    {
+      "Acao": [
+        "DesRegistrar"
+      ],
+      "TipoRegistro": "RegAsm",
+      "TipoInstalacao": "CODEBASE",
+      "Nome": "Linx.BlocoX.dll",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared",
+      "DadosRegistry": {
+        "SubKey": "LINXBLOCOX",
+        "Valor": "DllRegistrada"
+      }
+    },
+    {
+      "Acao": [
+        "Copiar",
+        "Registrar"
+      ],
+      "TipoRegistro": "RegAsm",
+      "TipoInstalacao": "CODEBASE",
+      "Nome": "LINX.NFCE.FOXPRO.DLL",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared",
+      "DadosRegistry": {
+        "SubKey": "NFCE",
+        "Valor": "DllRegistrada"
+      }
+    },
+    {
+      "Acao": [
+        "Deletar",
+        "Copiar",
+        "Registrar"
+      ],
+      "TipoRegistro": "RegAsm",
+      "TipoInstalacao": "CODEBASE",
+      "Nome": "LINX.PROCESSAR.NOTAS.DLL",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared",
+      "DadosRegistry": {
+        "SubKey": "LinxProcessInvoice",
+        "Valor": "DllRegistrada"
+      }
+    },
+    {
+      "Acao": [
+        "Deletar",
+        "Copiar",
+        "Registrar"
+      ],
+      "TipoRegistro": "RegAsm",
+      "TipoInstalacao": "CODEBASE",
+      "Nome": "LINX.TOOLS.GENERICS.DLL",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared",
+      "DadosRegistry": {
+        "SubKey": "LinxToolsGenerics",
+        "Valor": "DllRegistrada"
+      }
+    },
+    {
+      "Acao": [
+        "Copiar",
+        "Registrar"
+      ],
+      "TipoRegistro": "RegAsm",
+      "TipoInstalacao": "CODEBASE",
+      "Nome": "LINXDTEF.DLL",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "LinxPOS",
+      "DadosRegistry": {
+        "SubKey": "LinxDtef",
+        "Valor": "DllRegistrada"
+      }
+    },
+    {
+      "Acao": [
+        "Deletar",
+        "Copiar",
+        "Registrar"
+      ],
+      "TipoRegistro": "RegAsm",
+      "TipoInstalacao": "CODEBASE",
+      "Nome": "LINX.POS1985.BO.DLL",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared",
+      "DadosRegistry": {
+        "SubKey": "Linx.POS1985",
+        "Valor": "DllRegistrada"
+      }
+    },
+    {
+      "Acao": [
+        "Copiar",
+        "Registrar"
+      ],
+      "TipoRegistro": "RegAsm",
+      "TipoInstalacao": "CODEBASE",
+      "Nome": "LINXPOS.BUSINESS.PROMOTION.DLL",
+      "CaminhoOrigem": "ServicePack\\Modules\\LinxPOS",
+      "CaminhoDestino": "LinxPOS",
+      "DadosRegistry": {
+        "SubKey": "BusinessPromotion",
+        "Valor": "DllRegistrada"
+      }
+    },
+    {
+      "Acao": [
+        "Copiar",
+        "Registrar"
+      ],
+      "TipoRegistro": "RegAsm",
+      "TipoInstalacao": "CODEBASE",
+      "Nome": "LINX.ETL.INTEGRATION.DLL",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared",
+      "DadosRegistry": {
+        "SubKey": "ETLIntegration",
+        "Valor": "DllRegistrada"
+      }
+    },
+    {
+      "Acao": [
+        "Copiar",
+        "Registrar"
+      ],
+      "TipoRegistro": "Regsvr32",
+      "TipoInstalacao": "/r",
+      "Nome": "LINXMOBCOMPONENTS.DLL",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared",
+      "DadosRegistry": {
+        "SubKey": "LinxMobileComponents",
+        "Valor": "DllRegistrada"
+      }
+    },
+    {
+      "Acao": [
+        "Copiar",
+        "Registrar"
+      ],
+      "TipoRegistro": "RegAsm",
+      "TipoInstalacao": "CODEBASE",
+      "Nome": "LinxPOSGenerateBin.DLL",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared",
+      "DadosRegistry": {
+        "SubKey": "LinxPOSGenerateBin",
+        "Valor": "DllRegistrada"
+      }
+    },
+    {
+      "Acao": [
+        "Copiar",
+        "Registrar"
+      ],
+      "TipoRegistro": "RegAsm",
+      "TipoInstalacao": "CODEBASE",
+      "Nome": "MotorSynthesis.DLL",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared",
+      "DadosRegistry": {
+        "SubKey": "MotorSynthesis",
+        "Valor": "DllRegistrada"
+      }
+    },
+    {
+      "Acao": [
+        "Copiar",
+        "Registrar"
+      ],
+      "TipoRegistro": "RegAsm",
+      "TipoInstalacao": "CODEBASE",
+      "Nome": "LxEngSecurity.DLL",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared",
+      "DadosRegistry": {
+        "SubKey": "LxEngSecurity",
+        "Valor": "DllRegistrada"
+      }
+    },
+    {
+      "Acao": [
+        "Copiar",
+        "Registrar"
+      ],
+      "TipoRegistro": "RegAsm",
+      "TipoInstalacao": "CODEBASE",
+      "Nome": "LINXSERVICEHUB.dll",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared",
+      "DadosRegistry": {
+        "SubKey": "LinxServiceHub",
+        "Valor": "DllRegistrada"
+      }
+    },
+    {
+      "Acao": [
+        "Copiar",
+        "Registrar"
+      ],
+      "TipoRegistro": "RegAsm",
+      "TipoInstalacao": "CODEBASE",
+      "Nome": "Linx.OMS.DLL",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared",
+      "DadosRegistry": {
+        "SubKey": "LinxOMS",
+        "Valor": "DllRegistrada"
+      }
+    },
+    {
+      "Acao": [
+        "Deletar",
+        "Copiar",
+        "Registrar"
+      ],
+      "TipoRegistro": "RegAsm",
+      "TipoInstalacao": "CODEBASE",
+      "Nome": "LinxWishListService.dll",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared",
+      "DadosRegistry": {
+        "SubKey": "LinxWishListService",
+        "Valor": "DllRegistrada"
+      }
+    },
+    {
+      "Acao": [
+        "Deletar",
+        "Copiar",
+        "Registrar"
+      ],
+      "TipoRegistro": "RegAsm",
+      "TipoInstalacao": "CODEBASE",
+      "Nome": "Linx.OMS.Shw.dll",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared",
+      "DadosRegistry": {
+        "SubKey": "LinxWishListService",
+        "Valor": "DllRegistrada"
+      }
+    },
+    {
+      "Acao": [
+        "Copiar",
+        "Registrar"
+      ],
+      "TipoRegistro": "RegAsm",
+      "TipoInstalacao": "CODEBASE",
+      "Nome": "Linx.QrCode.Service.dll",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared",
+      "DadosRegistry": {
+        "SubKey": "LinxQrCode",
+        "Valor": "DllRegistrada"
+      }
+    },
+    {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "Linx.QrCode.Service.tlb",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared"
+    },
+    {
+      "Acao": [
+        "Copiar",
+        "Registrar"
+      ],
+      "TipoRegistro": "RegAsm",
+      "TipoInstalacao": "CODEBASE",
+      "Nome": "LinxM.DLL",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "LinxPOS",
+      "DadosRegistry": {
+        "SubKey": "LinxM",
+        "Valor": "DllRegistrada"
+      }
+    },
+    {
+      "Acao": [
+        "Copiar",
+        "Registrar"
+      ],
+      "TipoRegistro": "RegAsm",
+      "TipoInstalacao": "CODEBASE",
+      "Nome": "LinxB.dll",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "LinxPOS",
+      "DadosRegistry": {
+        "SubKey": "LINXBLOCOX",
+        "Valor": "DllRegistrada"
+      }
+    },
+    {
+      "Acao": [
+        "Copiar",
+        "Registrar"
+      ],
+      "TipoRegistro": "RegAsm",
+      "TipoInstalacao": "CODEBASE",
+      "Nome": "Linx.NFe.MIDe.dll",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared",
+      "DadosRegistry": {
+        "SubKey": "LINXNFEMIDE",
+        "Valor": "DllRegistrada"
+      }
+    },
+    {
+      "Acao": [
+        "Copiar",
+        "Registrar"
+      ],
+      "TipoRegistro": "RegAsm",
+      "TipoInstalacao": "CODEBASE",
+      "Nome": "LinxPay.dll",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "Shared",
+      "DadosRegistry": {
+        "SubKey": "LINXPAY",
+        "Valor": "DllRegistrada"
+      }
+    },
+   {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "BemaFI32.dll",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "LinxPOS"
+    },
+   {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "BemaMFD.dll",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "LinxPOS"
+    },
+   {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "BemaMFD2.dll",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "LinxPOS"
+    },
+   {
+      "Acao": [
+        "Copiar",
+        ""
+      ],
+      "Nome": "BemaMFD3.dll",
+      "CaminhoOrigem": "ServicePack\\Modules",
+      "CaminhoDestino": "LinxPOS"
+    },
+  ],
+  "Versao": 7.7
+}
