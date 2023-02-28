@@ -1,0 +1,196 @@
+CREATE Trigger [dbo].[LXU_LOJA_COMPRA] On [dbo].[LOJA_COMPRA] For UPDATE NOT FOR REPLICATION As 
+-- UPDATE Trigger On LOJA_COMPRA
+Begin
+
+-- 27/04/2017 - WENDEL CRESPIGIO - DM 14446 - #2# - Devido o Cadastro de FILIAIS e LOJAS_VAREJO poder exister com o código diferentes, a trigger estava barrando a importação, adicionado no verificador um OR para se existir na LOJAS_VAREJO OU FILIAIS.
+-- 26/04/2017 - WENDEL CRESPIGIO - DM 14446 - #1# - Devido o Cadastro de FILIAIS e LOJAS_VAREJO poder exister com o código diferentes, a trigger estava barrando a importação, adicionado no verificador um OR para se existir na LOJAS_VAREJO OU FILIAIS.
+
+Declare	@numrows	Int,
+		@nullcnt	Int,
+		@validcnt	Int,
+		@insPEDIDO char(8) ,
+		@delPEDIDO char(8) ,
+		@errno   Int,
+		@errmsg  varchar(255)
+
+	Select @numrows = @@rowcount
+
+--LOJA_COMPRA_STATUS - Child Update Restrict
+	IF	UPDATE(STATUS_COMPRA)
+
+	Begin
+		SELECT @NullCnt = 0
+		SELECT @ValidCnt = count(*)
+		FROM Inserted, LOJA_COMPRA_STATUS
+		WHERE	INSERTED.STATUS_COMPRA = LOJA_COMPRA_STATUS.STATUS_COMPRA
+
+		SELECT @NullCnt = count(*)
+		FROM Inserted 
+		WHERE	INSERTED.STATUS_COMPRA IS NULL
+
+		If @validcnt + @nullcnt != @numrows
+		Begin
+			Select	@errno  = 30002,
+				@errmsg = 'Impossível Atualizar #LOJA_COMPRA #porque #LOJA_COMPRA_STATUS #não existe.'
+			GoTo Error
+		End
+	End
+
+--LOJAS_VAREJO - Child Update Restrict
+	IF	UPDATE(CODIGO_FILIAL_ENTREGA)
+
+	Begin
+
+		SELECT @NullCnt = 0
+		SELECT @ValidCnt = count(*)
+		FROM Inserted, LOJAS_VAREJO, FILIAIS 
+		WHERE LOJAS_VAREJO.FILIAL = FILIAIS.FILIAL 
+		AND	INSERTED.CODIGO_FILIAL_ENTREGA = LOJAS_VAREJO.CODIGO_FILIAL --#1# 
+
+		If @validcnt + @nullcnt != @numrows
+		Begin
+			Select	@errno  = 30002,
+				@errmsg = 'Impossível Atualizar #LOJA_COMPRA #porque #LOJAS_VAREJO #não existe.'
+			GoTo Error
+		End
+	End
+
+--CLIENTES_VAREJO - Child Update Restrict
+	IF	UPDATE(CODIGO_CLIENTE_FORNECEDOR)
+
+	Begin
+		SELECT @NullCnt = 0
+		SELECT @ValidCnt = count(*)
+		FROM Inserted, CLIENTES_VAREJO
+		WHERE	INSERTED.CODIGO_CLIENTE_FORNECEDOR = CLIENTES_VAREJO.CODIGO_CLIENTE
+
+		SELECT @NullCnt = count(*)
+		FROM Inserted 
+		WHERE	INSERTED.CODIGO_CLIENTE_FORNECEDOR IS NULL
+
+		If @validcnt + @nullcnt != @numrows
+		Begin
+			Select	@errno  = 30002,
+				@errmsg = 'Impossível Atualizar #LOJA_COMPRA #porque #CLIENTES_VAREJO #não existe.'
+			GoTo Error
+		End
+	End
+
+--LOJAS_VAREJO - Child Update Restrict
+	IF	UPDATE(CODIGO_FILIAL_FRANQUEADOR)
+
+	Begin
+		SELECT @NullCnt = 0
+		SELECT @ValidCnt = count(*)
+		FROM Inserted, LOJAS_VAREJO, FILIAIS
+		WHERE LOJAS_VAREJO.FILIAL = FILIAIS.FILIAL
+		AND INSERTED.CODIGO_FILIAL_FRANQUEADOR = LOJAS_VAREJO.CODIGO_FILIAL --#2# 
+
+		SELECT @NullCnt = count(*)
+		FROM Inserted 
+		WHERE	INSERTED.CODIGO_FILIAL_FRANQUEADOR IS NULL
+
+		If @validcnt + @nullcnt != @numrows
+		Begin
+			Select	@errno  = 30002,
+				@errmsg = 'Impossível Atualizar #LOJA_COMPRA #porque #LOJAS_VAREJO #não existe.'
+			GoTo Error
+		End
+	End
+
+--LOJA_COMPRA_PRODUTO - Parent Update Cascade
+	IF	UPDATE(PEDIDO)
+
+	If Exists (	SELECT * 
+			FROM INSERTED 
+				LEFT JOIN DELETED ON 
+					DELETED.PEDIDO = INSERTED.PEDIDO
+			WHERE	@InsPEDIDO IS NULL
+
+		)
+	BEGIN
+		DECLARE CURI_LOJA_COMPRA_PRODUTO2131 CURSOR FOR 
+			SELECT	PEDIDO
+			FROM INSERTED
+		DECLARE CURD_LOJA_COMPRA_PRODUTO2131 CURSOR FOR 
+			SELECT	PEDIDO
+			FROM DELETED
+		OPEN CURI_LOJA_COMPRA_PRODUTO2131
+		OPEN CURD_LOJA_COMPRA_PRODUTO2131
+		FETCH NEXT FROM CURI_LOJA_COMPRA_PRODUTO2131
+				INTO	@InsPEDIDO
+		FETCH NEXT FROM CURD_LOJA_COMPRA_PRODUTO2131
+				INTO	@DelPEDIDO
+		WHILE @@Fetch_Status = 0
+		BEGIN
+			UPDATE LOJA_COMPRA_PRODUTO
+			SET	PEDIDO = @InsPEDIDO
+			WHERE	PEDIDO = @delPEDIDO
+
+			FETCH NEXT FROM CURI_LOJA_COMPRA_PRODUTO2131
+					INTO	@InsPEDIDO
+			FETCH NEXT FROM CURD_LOJA_COMPRA_PRODUTO2131
+					INTO	@DelPEDIDO
+		END
+		CLOSE CURI_LOJA_COMPRA_PRODUTO2131
+		CLOSE CURD_LOJA_COMPRA_PRODUTO2131
+		DEALLOCATE CURI_LOJA_COMPRA_PRODUTO2131
+		DEALLOCATE CURD_LOJA_COMPRA_PRODUTO2131
+	END
+
+--LOJA_COMPRA_PARCELA - Parent Update Cascade
+	IF	UPDATE(PEDIDO)
+
+	If Exists (	SELECT * 
+			FROM INSERTED 
+				LEFT JOIN DELETED ON 
+					DELETED.PEDIDO = INSERTED.PEDIDO
+			WHERE	@InsPEDIDO IS NULL
+
+		)
+	BEGIN
+		DECLARE CURI_LOJA_COMPRA_PARCELA2151 CURSOR FOR 
+			SELECT	PEDIDO
+			FROM INSERTED
+		DECLARE CURD_LOJA_COMPRA_PARCELA2151 CURSOR FOR 
+			SELECT	PEDIDO
+			FROM DELETED
+		OPEN CURI_LOJA_COMPRA_PARCELA2151
+		OPEN CURD_LOJA_COMPRA_PARCELA2151
+		FETCH NEXT FROM CURI_LOJA_COMPRA_PARCELA2151
+				INTO	@InsPEDIDO
+		FETCH NEXT FROM CURD_LOJA_COMPRA_PARCELA2151
+				INTO	@DelPEDIDO
+		WHILE @@Fetch_Status = 0
+		BEGIN
+			UPDATE LOJA_COMPRA_PARCELA
+			SET	PEDIDO = @InsPEDIDO
+			WHERE	PEDIDO = @delPEDIDO
+
+			FETCH NEXT FROM CURI_LOJA_COMPRA_PARCELA2151
+					INTO	@InsPEDIDO
+			FETCH NEXT FROM CURD_LOJA_COMPRA_PARCELA2151
+					INTO	@DelPEDIDO
+		END
+		CLOSE CURI_LOJA_COMPRA_PARCELA2151
+		CLOSE CURD_LOJA_COMPRA_PARCELA2151
+		DEALLOCATE CURI_LOJA_COMPRA_PARCELA2151
+		DEALLOCATE CURD_LOJA_COMPRA_PARCELA2151
+	END
+
+	
+	---DATA PARA TRANSFERENCIA---------------------------------------------------------------------------
+	IF NOT UPDATE(DATA_PARA_TRANSFERENCIA)
+	UPDATE 	LOJA_COMPRA
+	SET 	DATA_PARA_TRANSFERENCIA = GETDATE()
+	FROM 	LOJA_COMPRA, INSERTED
+	WHERE	LOJA_COMPRA.PEDIDO = INSERTED.PEDIDO
+			AND (INSERTED.DATA_PARA_TRANSFERENCIA Is Null 
+				OR LOJA_COMPRA.DATA_PARA_TRANSFERENCIA = INSERTED.DATA_PARA_TRANSFERENCIA) 
+	-----------------------------------------------------------------------------------------------------
+
+	return
+Error:
+	raiserror(@errmsg, 18, 1)
+	rollback transaction
+End

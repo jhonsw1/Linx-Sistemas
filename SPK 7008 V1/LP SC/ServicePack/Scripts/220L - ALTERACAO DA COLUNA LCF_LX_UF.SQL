@@ -1,0 +1,6 @@
+IF EXISTS(SELECT 1  FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'LCF_LX_UF' AND TABLE_SCHEMA='dbo' AND COLUMN_NAME = 'LIMITE_NFCE_UF' AND DATA_TYPE = 'int')
+BEGIN
+ EXEC sp_unbindefault 'lcf_lx_uf.limite_nfce_uf' 
+    ALTER TABLE LCF_LX_UF ALTER COLUMN LIMITE_NFCE_UF numeric(9,2) 
+	EXEC sp_bindefault 'DEFAULT_0', 'lcf_lx_uf.limite_nfce_uf' 
+END

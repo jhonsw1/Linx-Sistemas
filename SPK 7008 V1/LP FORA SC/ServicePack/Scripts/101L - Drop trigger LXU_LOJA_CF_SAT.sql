@@ -1,0 +1,4 @@
+IF EXISTS (SELECT * FROM sys.OBJECTS WHERE  NAME = 'LXU_LOJA_CF_SAT' and type = 'TR')
+begin 
+   DROP TRIGGER [DBO].[LXU_LOJA_CF_SAT] 
+end

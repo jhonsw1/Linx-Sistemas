@@ -1,0 +1,40 @@
+CREATE FUNCTION FN_ClienteEndEntrega ( @CODIGO_CLIENTE VARCHAR(14))
+RETURNS @EndEntrega TABLE  (
+						ENTREGA				BIT NOT NULL ,
+						CODIGO_CLIENTE      VARCHAR(14)  COLLATE DATABASE_DEFAULT NOT NULL,
+						NOME                VARCHAR(40)  COLLATE DATABASE_DEFAULT NOT NULL,
+						ITEM_ENDERECO       INT NULL,
+						ENDERECO			VARCHAR(90)  COLLATE DATABASE_DEFAULT NOT NULL,
+						COMPLEMENTO			VARCHAR(40)  COLLATE DATABASE_DEFAULT NOT NULL,
+						BAIRRO				VARCHAR(40)  COLLATE DATABASE_DEFAULT NOT NULL,
+						CIDADE				VARCHAR(40)  COLLATE DATABASE_DEFAULT NOT NULL,
+						UF					VARCHAR(02)  COLLATE DATABASE_DEFAULT NOT NULL,
+						CEP					VARCHAR(09)  COLLATE DATABASE_DEFAULT NOT NULL,
+						PAIS				VARCHAR(40)  COLLATE DATABASE_DEFAULT NOT NULL,
+						ETIQUETA			VARCHAR(500) COLLATE DATABASE_DEFAULT NOT NULL
+						)
+AS
+BEGIN 
+	insert INTO @EndEntrega (ENTREGA, CODIGO_CLIENTE, NOME, ITEM_ENDERECO, ENDERECO, COMPLEMENTO, BAIRRO, CIDADE, UF, CEP, PAIS, ETIQUETA)
+	SELECT 0 as ENTREGA, CODIGO_CLIENTE, UPPER(NOME) AS NOME, ITEM_ENDERECO , upper(ENDERECO) as ENDERECO, UPPER(ISNULL(complemento,'')) AS COMPLEMENTO, 
+			UPPER(BAIRRO) AS BAIRRO, UPPER(CIDADE) AS CIDADE, UPPER(UF) AS UF, UPPER(CEP) AS CEP, isnull(UPPER(PAIS),'BRASIL') AS PAIS,
+			rtrim(ltrim(isnull(upper(ENDERECO),''))) + ' ' + rtrim(ltrim(isnull(UPPER(complemento),''))) + ' - ' + 
+			rtrim(ltrim(isnull(UPPER(BAIRRO),''))) + ' - ' +  rtrim(ltrim(isnull(UPPER(CIDADE),''))) + '/' +  
+			rtrim(ltrim(isnull(UPPER(UF),''))) + ' - ' + rtrim(ltrim(isnull(UPPER(CEP),''))) AS ETIQUETA
+	FROM CLIENTE_VAR_ENDERECOS
+	WHERE CODIGO_CLIENTE = @CODIGO_CLIENTE
+	UNION ALL
+	select cast(0 as bit) as ENTREGA, CODIGO_CLIENTE, UPPER(CLIENTE_VAREJO) AS NOME, 0 AS ITEM_ENDERECO, 
+	rtrim(ltrim(isnull(upper(TIPO_LOGRADOURO),''))) + ' ' + rtrim(ltrim(isnull(upper(ENDERECO),''))) + ' ' + rtrim(ltrim(ISNULL(NUMERO,''))) as ENDERECO, 
+	UPPER(ISNULL(complemento,'')) AS COMPLEMENTO,	UPPER(BAIRRO) AS BAIRRO, UPPER(CIDADE) AS CIDADE, UPPER(UF) AS UF, UPPER(CEP) AS CEP, isnull(UPPER(PAIS),'BRASIL') AS PAIS,
+
+	rtrim(ltrim(isnull(upper(TIPO_LOGRADOURO),''))) + ' ' + rtrim(ltrim(isnull(upper(ENDERECO),''))) + ', ' + rtrim(ltrim(ISNULL(NUMERO,''))) + ' ' + 
+	rtrim(ltrim(isnull(UPPER(complemento),''))) + ' - ' +  rtrim(ltrim(isnull(UPPER(BAIRRO),''))) + ' - ' + rtrim(ltrim(isnull(UPPER(CIDADE),''))) + '/' +  
+	rtrim(ltrim(isnull(UPPER(UF),''))) + ' - ' + rtrim(ltrim(isnull(UPPER(CEP),''))) AS ETIQUETA
+
+	from CLIENTES_VAREJO
+	WHERE CODIGO_CLIENTE = @CODIGO_CLIENTE
+	order by ITEM_ENDERECO asc
+
+	Return
+END

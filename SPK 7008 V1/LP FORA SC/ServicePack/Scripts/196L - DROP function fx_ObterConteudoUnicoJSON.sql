@@ -1,0 +1,4 @@
+IF OBJECT_ID('fx_ObterConteudoUnicoJSON') IS NOT NULL
+BEGIN
+	DROP FUNCTION fx_ObterConteudoUnicoJSON
+END

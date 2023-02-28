@@ -1,0 +1,17 @@
+IF EXISTS(SELECT 1 FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'LOJA_PEDIDO' AND COLUMN_NAME = 'LX_PEDIDO_ORIGEM' AND COLUMN_DEFAULT IS NULL)
+	EXEC sp_bindefault 'DEFAULT_0', 'LOJA_PEDIDO.LX_PEDIDO_ORIGEM'
+
+IF EXISTS(SELECT 1 FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'LOJA_VENDA' AND COLUMN_NAME = 'LX_VENDA_ORIGEM' AND COLUMN_DEFAULT IS NULL)
+	EXEC sp_bindefault 'DEFAULT_0', 'LOJA_VENDA.LX_VENDA_ORIGEM'
+
+----LxPedidoOrigemEnum
+--	Indefinido = 0,
+--       Caixa = 1,
+--       Microterminal = 2,
+--       Mobile = 3
+
+--	/****/
+--	--LxAtendimentoOrigemEnum
+--	Indefinido = 0,
+--       Caixa = 1,
+--       Mobile = 2

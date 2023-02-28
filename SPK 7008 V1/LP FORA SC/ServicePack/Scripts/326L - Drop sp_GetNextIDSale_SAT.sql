@@ -1,0 +1,4 @@
+IF EXISTS (SELECT 1 FROM   sys.OBJECTS WHERE  NAME = 'sp_GetNextIDSale_SAT')
+Begin 
+  DROP PROCEDURE [DBO].sp_GetNextIDSale_SAT 
+End

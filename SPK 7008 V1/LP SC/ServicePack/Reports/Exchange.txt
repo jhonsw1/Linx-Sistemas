@@ -1,0 +1,27 @@
+COMPROVANTE DE DEVOLUCAO DE MERCADORIAS
+SAIDAS ATRAVES DE MAQUINA REGISTRADORA
+
+{E}
+
+CUPOM FISCAL ORIGINAL: ________________
+
+DATA ORIGINAL .......: ____/____/______
+
+TERMINAL ORIGINAL ...: ________________
+
+{D}
+{C}
+
+Assinatura do Cliente
+
+________________________________________
+
+
+Assinatura do Funcionario
+
+________________________________________
+
+
+Assinatura do Gerente
+
+________________________________________
