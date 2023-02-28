@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<VFPData>
+	<xsd:schema id="VFPData" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="VFPData" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="curLx_administradoras_cartao" minOccurs="0" maxOccurs="unbounded">
+						<xsd:complexType>
+							<xsd:attribute name="lx_cod_administradora" use="required">
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:string">
+										<xsd:maxLength value="5" />
+									</xsd:restriction>
+								</xsd:simpleType>
+							</xsd:attribute>
+							<xsd:attribute name="lx_administradora" use="required">
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:string">
+										<xsd:maxLength value="40" />
+									</xsd:restriction>
+								</xsd:simpleType>
+							</xsd:attribute>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+				<xsd:anyAttribute namespace="http://www.w3.org/XML/1998/namespace" processContents="lax" />
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<curLx_administradoras_cartao lx_cod_administradora="00000" lx_administradora="Indefinido" />
+	<curLx_administradoras_cartao lx_cod_administradora="00001" lx_administradora="Visa Credito" />
+	<curLx_administradoras_cartao lx_cod_administradora="00002" lx_administradora="Mastercard" />
+	<curLx_administradoras_cartao lx_cod_administradora="00003" lx_administradora="Diners" />
+	<curLx_administradoras_cartao lx_cod_administradora="00004" lx_administradora="American Express" />
+	<curLx_administradoras_cartao lx_cod_administradora="00005" lx_administradora="Sollo" />
+	<curLx_administradoras_cartao lx_cod_administradora="00006" lx_administradora="Sidecard" />
+	<curLx_administradoras_cartao lx_cod_administradora="00007" lx_administradora="Private Label" />
+	<curLx_administradoras_cartao lx_cod_administradora="00008" lx_administradora="Redeshop" />
+	<curLx_administradoras_cartao lx_cod_administradora="00010" lx_administradora="Fininvest" />
+	<curLx_administradoras_cartao lx_cod_administradora="00011" lx_administradora="JCB" />
+	<curLx_administradoras_cartao lx_cod_administradora="00012" lx_administradora="Hipercard" />
+	<curLx_administradoras_cartao lx_cod_administradora="00013" lx_administradora="Aura" />
+	<curLx_administradoras_cartao lx_cod_administradora="00014" lx_administradora="Losango" />
+	<curLx_administradoras_cartao lx_cod_administradora="00015" lx_administradora="Sorocred" />
+	<curLx_administradoras_cartao lx_cod_administradora="00115" lx_administradora="Bradescard" />
+	<curLx_administradoras_cartao lx_cod_administradora="01251" lx_administradora="Elo Debito" />
+	<curLx_administradoras_cartao lx_cod_administradora="01252" lx_administradora="Elo Credito" />
+	<curLx_administradoras_cartao lx_cod_administradora="10000" lx_administradora="Indefinido" />
+	<curLx_administradoras_cartao lx_cod_administradora="10001" lx_administradora="Ticket" />
+	<curLx_administradoras_cartao lx_cod_administradora="10002" lx_administradora="Visa Vale" />
+	<curLx_administradoras_cartao lx_cod_administradora="10003" lx_administradora="Sodexho" />
+	<curLx_administradoras_cartao lx_cod_administradora="10004" lx_administradora="Nutricash" />
+	<curLx_administradoras_cartao lx_cod_administradora="10005" lx_administradora="Green Card" />
+	<curLx_administradoras_cartao lx_cod_administradora="10006" lx_administradora="Plan Vale" />
+	<curLx_administradoras_cartao lx_cod_administradora="10007" lx_administradora="Banquet" />
+	<curLx_administradoras_cartao lx_cod_administradora="10008" lx_administradora="Vero Cheque" />
+	<curLx_administradoras_cartao lx_cod_administradora="10009" lx_administradora="Sapore" />
+	<curLx_administradoras_cartao lx_cod_administradora="10010" lx_administradora="BNB Clube" />
+	<curLx_administradoras_cartao lx_cod_administradora="10011" lx_administradora="Vale Card" />
+	<curLx_administradoras_cartao lx_cod_administradora="10012" lx_administradora="Cabal" />
+	<curLx_administradoras_cartao lx_cod_administradora="10125" lx_administradora="Cielo" />
+	<curLx_administradoras_cartao lx_cod_administradora="20001" lx_administradora="Maestro" />
+	<curLx_administradoras_cartao lx_cod_administradora="20002" lx_administradora="Visa Electron" />
+	<curLx_administradoras_cartao lx_cod_administradora="20003" lx_administradora="Cabal Debit" />
+</VFPData>

@@ -1,0 +1,66 @@
+<?xml version = "1.0" encoding="Windows-1252" standalone="yes"?>
+<VFPData>
+	<xsd:schema id="VFPData" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="VFPData" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="loja_formas_parcelas" minOccurs="0" maxOccurs="unbounded">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="parcela">
+									<xsd:simpleType>
+										<xsd:restriction base="xsd:string">
+											<xsd:maxLength value="2"/>
+										</xsd:restriction>
+									</xsd:simpleType>
+								</xsd:element>
+								<xsd:element name="cod_forma_pgto">
+									<xsd:simpleType>
+										<xsd:restriction base="xsd:string">
+											<xsd:maxLength value="2"/>
+										</xsd:restriction>
+									</xsd:simpleType>
+								</xsd:element>
+								<xsd:element name="tipo_pgto">
+									<xsd:simpleType>
+										<xsd:restriction base="xsd:string">
+											<xsd:maxLength value="1"/>
+										</xsd:restriction>
+									</xsd:simpleType>
+								</xsd:element>
+								<xsd:element name="dias_vencimento" type="xsd:int" minOccurs="0"/>
+								<xsd:element name="porcentagem" type="xsd:double" minOccurs="0"/>
+								<xsd:element name="data_para_transferencia" type="xsd:dateTime" minOccurs="0"/>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+				<xsd:anyAttribute namespace="http://www.w3.org/XML/1998/namespace" processContents="lax"/>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<loja_formas_parcelas>
+		<parcela>1</parcela>
+		<cod_forma_pgto>**</cod_forma_pgto>
+		<tipo_pgto>R</tipo_pgto>
+		<dias_vencimento>0</dias_vencimento>
+		<porcentagem>100.00</porcentagem>
+		<data_para_transferencia>2003-09-17T19:06:18</data_para_transferencia>
+	</loja_formas_parcelas>
+	<loja_formas_parcelas>
+		<parcela>1</parcela>
+		<cod_forma_pgto>$$</cod_forma_pgto>
+		<tipo_pgto>D</tipo_pgto>
+		<dias_vencimento>0</dias_vencimento>
+		<porcentagem>100.00</porcentagem>
+		<data_para_transferencia>2003-09-17T19:06:18</data_para_transferencia>
+	</loja_formas_parcelas>
+	<loja_formas_parcelas>
+		<parcela>1</parcela>
+		<cod_forma_pgto>@_</cod_forma_pgto>
+		<tipo_pgto>@</tipo_pgto>
+		<dias_vencimento>0</dias_vencimento>
+		<porcentagem>100.00</porcentagem>
+		<data_para_transferencia>2003-09-17T19:06:18</data_para_transferencia>
+	</loja_formas_parcelas>
+</VFPData>

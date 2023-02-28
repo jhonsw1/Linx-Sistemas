@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="Windows-1252" standalone="yes" ?>
+<VFPData>
+	<xsd:schema id="VFPData" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="VFPData" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="loja_caixa_tipos" minOccurs="0" maxOccurs="unbounded">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="tipo_lancamento_caixa">
+									<xsd:simpleType>
+										<xsd:restriction base="xsd:string">
+											<xsd:maxLength value="2" />
+										</xsd:restriction>
+									</xsd:simpleType>
+								</xsd:element>
+								<xsd:element name="desc_lanc_caixa">
+									<xsd:simpleType>
+										<xsd:restriction base="xsd:string">
+											<xsd:maxLength value="40" />
+										</xsd:restriction>
+									</xsd:simpleType>
+								</xsd:element>
+								<xsd:element name="indicador_mov_caixa">
+									<xsd:simpleType>
+										<xsd:restriction base="xsd:string">
+											<xsd:maxLength value="1" />
+										</xsd:restriction>
+									</xsd:simpleType>
+								</xsd:element>
+								<xsd:element name="tipo_fiscal" type="xsd:int" minOccurs="0" />
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+				<xsd:anyAttribute namespace="http://www.w3.org/XML/1998/namespace" processContents="lax" />
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<loja_caixa_tipos>
+		<tipo_lancamento_caixa>00</tipo_lancamento_caixa>
+		<desc_lanc_caixa>ABERTURA DE CAIXA</desc_lanc_caixa>
+		<indicador_mov_caixa>E</indicador_mov_caixa>
+		<tipo_fiscal>0</tipo_fiscal>
+	</loja_caixa_tipos>
+	<loja_caixa_tipos>
+		<tipo_lancamento_caixa>99</tipo_lancamento_caixa>
+		<desc_lanc_caixa>FECHAMENTO DE CAIXA</desc_lanc_caixa>
+		<indicador_mov_caixa>S</indicador_mov_caixa>
+		<tipo_fiscal>0</tipo_fiscal>
+	</loja_caixa_tipos>
+	<loja_caixa_tipos>
+		<tipo_lancamento_caixa>FA</tipo_lancamento_caixa>
+		<desc_lanc_caixa>FECHAMENTO DE CAIXA DE (A)</desc_lanc_caixa>
+		<indicador_mov_caixa>S</indicador_mov_caixa>
+		<tipo_fiscal>0</tipo_fiscal>
+	</loja_caixa_tipos>
+	<loja_caixa_tipos>
+		<tipo_lancamento_caixa>FB</tipo_lancamento_caixa>
+		<desc_lanc_caixa>FECHAMENTO DE CAIXA DE (B)</desc_lanc_caixa>
+		<indicador_mov_caixa>S</indicador_mov_caixa>
+		<tipo_fiscal>0</tipo_fiscal>
+	</loja_caixa_tipos>
+	<loja_caixa_tipos>
+		<tipo_lancamento_caixa>FC</tipo_lancamento_caixa>
+		<desc_lanc_caixa>FECHAMENTO DE CAIXA DE (C)</desc_lanc_caixa>
+		<indicador_mov_caixa>S</indicador_mov_caixa>
+		<tipo_fiscal>0</tipo_fiscal>
+	</loja_caixa_tipos>
+	<loja_caixa_tipos>
+		<tipo_lancamento_caixa>FD</tipo_lancamento_caixa>
+		<desc_lanc_caixa>FECHAMENTO DE CAIXA DE (D)</desc_lanc_caixa>
+		<indicador_mov_caixa>S</indicador_mov_caixa>
+		<tipo_fiscal>0</tipo_fiscal>
+	</loja_caixa_tipos>
+	<loja_caixa_tipos>
+		<tipo_lancamento_caixa>FE</tipo_lancamento_caixa>
+		<desc_lanc_caixa>FECHAMENTO DE CAIXA DE (E)</desc_lanc_caixa>
+		<indicador_mov_caixa>S</indicador_mov_caixa>
+		<tipo_fiscal>0</tipo_fiscal>
+	</loja_caixa_tipos>
+	<loja_caixa_tipos>
+		<tipo_lancamento_caixa>FF</tipo_lancamento_caixa>
+		<desc_lanc_caixa>FECHAMENTO DE CAIXA DE (F)</desc_lanc_caixa>
+		<indicador_mov_caixa>S</indicador_mov_caixa>
+		<tipo_fiscal>0</tipo_fiscal>
+	</loja_caixa_tipos>
+	<loja_caixa_tipos>
+		<tipo_lancamento_caixa>FI</tipo_lancamento_caixa>
+		<desc_lanc_caixa>FECHAMENTO DE CAIXA DE (I)</desc_lanc_caixa>
+		<indicador_mov_caixa>S</indicador_mov_caixa>
+		<tipo_fiscal>0</tipo_fiscal>
+	</loja_caixa_tipos>
+	<loja_caixa_tipos>
+		<tipo_lancamento_caixa>FJ</tipo_lancamento_caixa>
+		<desc_lanc_caixa>FECHAMENTO DE CAIXA DE (J)</desc_lanc_caixa>
+		<indicador_mov_caixa>S</indicador_mov_caixa>
+		<tipo_fiscal>0</tipo_fiscal>
+	</loja_caixa_tipos>
+	<loja_caixa_tipos>
+		<tipo_lancamento_caixa>FK</tipo_lancamento_caixa>
+		<desc_lanc_caixa>FECHAMENTO DE CAIXA DE (K)</desc_lanc_caixa>
+		<indicador_mov_caixa>S</indicador_mov_caixa>
+		<tipo_fiscal>0</tipo_fiscal>
+	</loja_caixa_tipos>
+	<loja_caixa_tipos>
+		<tipo_lancamento_caixa>FM</tipo_lancamento_caixa>
+		<desc_lanc_caixa>FECHAMENTO DE CAIXA DE (M)</desc_lanc_caixa>
+		<indicador_mov_caixa>S</indicador_mov_caixa>
+		<tipo_fiscal>0</tipo_fiscal>
+	</loja_caixa_tipos>
+	<loja_caixa_tipos>
+		<tipo_lancamento_caixa>FP</tipo_lancamento_caixa>
+		<desc_lanc_caixa>FECHAMENTO DE CAIXA DE (P)</desc_lanc_caixa>
+		<indicador_mov_caixa>S</indicador_mov_caixa>
+		<tipo_fiscal>0</tipo_fiscal>
+	</loja_caixa_tipos>
+	<loja_caixa_tipos>
+		<tipo_lancamento_caixa>FR</tipo_lancamento_caixa>
+		<desc_lanc_caixa>FECHAMENTO DE CAIXA DE (R)</desc_lanc_caixa>
+		<indicador_mov_caixa>S</indicador_mov_caixa>
+		<tipo_fiscal>0</tipo_fiscal>
+	</loja_caixa_tipos>
+	<loja_caixa_tipos>
+		<tipo_lancamento_caixa>FV</tipo_lancamento_caixa>
+		<desc_lanc_caixa>FECHAMENTO DE CAIXA DE (V)</desc_lanc_caixa>
+		<indicador_mov_caixa>S</indicador_mov_caixa>
+		<tipo_fiscal>0</tipo_fiscal>
+	</loja_caixa_tipos>
+	<loja_caixa_tipos>
+		<tipo_lancamento_caixa>FX</tipo_lancamento_caixa>
+		<desc_lanc_caixa>FECHAMENTO DE CAIXA DE (X)</desc_lanc_caixa>
+		<indicador_mov_caixa>S</indicador_mov_caixa>
+		<tipo_fiscal>0</tipo_fiscal>
+	</loja_caixa_tipos>
+</VFPData>

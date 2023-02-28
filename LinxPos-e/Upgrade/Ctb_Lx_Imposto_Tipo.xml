@@ -1,0 +1,96 @@
+<?xml version = "1.0" encoding="Windows-1252" standalone="yes"?>
+<VFPData>
+	<xsd:schema id="VFPData" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="VFPData" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="curctb_lx_imposto_tipo" minOccurs="0" maxOccurs="unbounded">
+						<xsd:complexType>
+							<xsd:attribute name="aliquota" use="optional">
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:decimal">
+										<xsd:totalDigits value="9"/>
+										<xsd:fractionDigits value="5"/>
+									</xsd:restriction>
+								</xsd:simpleType>
+							</xsd:attribute>
+							<xsd:attribute name="aliquota_fixa" type="xsd:boolean" use="required"/>
+							<xsd:attribute name="gera_na_entrada" type="xsd:boolean" use="required"/>
+							<xsd:attribute name="gera_na_saida" type="xsd:boolean" use="required"/>
+							<xsd:attribute name="id_imposto" type="xsd:int" use="required"/>
+							<xsd:attribute name="imposto" use="required">
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:string">
+										<xsd:maxLength value="25"/>
+									</xsd:restriction>
+								</xsd:simpleType>
+							</xsd:attribute>
+							<xsd:attribute name="incidencia" type="xsd:int" use="optional"/>
+							<xsd:attribute name="agrega_apos_desconto" type="xsd:boolean" use="required"/>
+							<xsd:attribute name="agrega_apos_encargo" type="xsd:boolean" use="required"/>
+							<xsd:attribute name="nome_tecnico" use="optional">
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:string">
+										<xsd:maxLength value="40"/>
+									</xsd:restriction>
+								</xsd:simpleType>
+							</xsd:attribute>
+							<xsd:attribute name="obs_imposto" use="optional">
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:string">
+										<xsd:maxLength value="2147483647"/>
+									</xsd:restriction>
+								</xsd:simpleType>
+							</xsd:attribute>
+							<xsd:attribute name="id_imposto_apurar" type="xsd:int" use="optional"/>
+							<xsd:attribute name="calculo_decimal" type="xsd:int" use="optional"/>
+							<xsd:attribute name="gera_na_loja" type="xsd:boolean" use="required"/>
+							<xsd:attribute name="valor_min_arrecadacao" use="optional">
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:decimal">
+										<xsd:totalDigits value="15"/>
+										<xsd:fractionDigits value="2"/>
+									</xsd:restriction>
+								</xsd:simpleType>
+							</xsd:attribute>
+							<xsd:attribute name="valida_valor_parcela" type="xsd:boolean" use="required"/>
+							<xsd:attribute name="tipo_apuracao" type="xsd:int" use="optional"/>
+							<xsd:attribute name="inativo" type="xsd:boolean" use="required"/>
+							<xsd:attribute name="data_para_transferencia" type="xsd:dateTime" use="optional"/>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+				<xsd:anyAttribute namespace="http://www.w3.org/XML/1998/namespace" processContents="lax"/>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<curctb_lx_imposto_tipo aliquota=".00000" aliquota_fixa="false" gera_na_entrada="true" gera_na_saida="true" id_imposto="1" imposto="ICMS" incidencia="3" agrega_apos_desconto="true" agrega_apos_encargo="true" nome_tecnico="ICMS" obs_imposto="ICMS sobre as compras e vendas de mercadorias, a compensar." calculo_decimal="3" gera_na_loja="false" valor_min_arrecadacao=".00" valida_valor_parcela="false" tipo_apuracao="1" inativo="false"/>
+	<curctb_lx_imposto_tipo aliquota=".00000" aliquota_fixa="false" gera_na_entrada="true" gera_na_saida="true" id_imposto="2" imposto="IPI" incidencia="1" agrega_apos_desconto="false" agrega_apos_encargo="false" nome_tecnico="IPI" obs_imposto="IPI sobre as compras e vendas de mercadorias, a compensar." calculo_decimal="0" gera_na_loja="false" valor_min_arrecadacao=".00" valida_valor_parcela="false" tipo_apuracao="1" inativo="false"/>
+	<curctb_lx_imposto_tipo aliquota="1.50000" aliquota_fixa="true" gera_na_entrada="false" gera_na_saida="false" id_imposto="3" imposto="IRRF" incidencia="2" agrega_apos_desconto="true" agrega_apos_encargo="true" nome_tecnico="IRRF" obs_imposto="IRRF retido para o fornecedor nas compras ou a recolher nas vendas de serviços." calculo_decimal="0" gera_na_loja="false" valor_min_arrecadacao="10.00" valida_valor_parcela="false" tipo_apuracao="1" inativo="false"/>
+	<curctb_lx_imposto_tipo aliquota="11.00000" aliquota_fixa="true" gera_na_entrada="false" gera_na_saida="false" id_imposto="4" imposto="INSS" incidencia="2" agrega_apos_desconto="true" agrega_apos_encargo="true" nome_tecnico="INSS" obs_imposto="INSS retido para o fornecedor nas compras ou a recolher nas vendas de serviços." calculo_decimal="0" gera_na_loja="false" valor_min_arrecadacao="10.00" valida_valor_parcela="false" tipo_apuracao="1" inativo="false"/>
+	<curctb_lx_imposto_tipo aliquota="1.65000" aliquota_fixa="true" gera_na_entrada="true" gera_na_saida="true" id_imposto="5" imposto="PIS" incidencia="3" agrega_apos_desconto="true" agrega_apos_encargo="true" nome_tecnico="PIS" obs_imposto="PIS sobre as compras e vendas de mercadorias, a compensar." calculo_decimal="0" gera_na_loja="true" valor_min_arrecadacao=".00" valida_valor_parcela="false" tipo_apuracao="1" inativo="false"/>
+	<curctb_lx_imposto_tipo aliquota="7.60000" aliquota_fixa="true" gera_na_entrada="true" gera_na_saida="true" id_imposto="6" imposto="COFINS" incidencia="3" agrega_apos_desconto="true" agrega_apos_encargo="true" nome_tecnico="COFINS" obs_imposto="COFINS sobre as compras e vendas de mercadorias, a compensar." calculo_decimal="0" gera_na_loja="true" valor_min_arrecadacao=".00" valida_valor_parcela="false" tipo_apuracao="1" inativo="false"/>
+	<curctb_lx_imposto_tipo aliquota=".00000" aliquota_fixa="false" gera_na_entrada="false" gera_na_saida="false" id_imposto="7" imposto="I.IMPORT." incidencia="1" agrega_apos_desconto="false" agrega_apos_encargo="false" nome_tecnico="II" obs_imposto="Imposto sobre Importação" calculo_decimal="0" gera_na_loja="false" valor_min_arrecadacao=".00" valida_valor_parcela="false" tipo_apuracao="1" inativo="false"/>
+	<curctb_lx_imposto_tipo aliquota="10.00000" aliquota_fixa="true" gera_na_entrada="false" gera_na_saida="false" id_imposto="8" imposto="IVA" incidencia="1" agrega_apos_desconto="false" agrega_apos_encargo="false" nome_tecnico="IVA" obs_imposto="IVA sobre as compras e vendas de mercadorias, a compensar." calculo_decimal="0" gera_na_loja="false" valor_min_arrecadacao=".00" valida_valor_parcela="false" tipo_apuracao="1" inativo="false"/>
+	<curctb_lx_imposto_tipo aliquota=".00000" aliquota_fixa="false" gera_na_entrada="false" gera_na_saida="false" id_imposto="9" imposto="RECARGO" incidencia="1" agrega_apos_desconto="false" agrega_apos_encargo="false" nome_tecnico="RECARGO" obs_imposto="IRPF pessoa física (Europa)" calculo_decimal="0" gera_na_loja="false" valor_min_arrecadacao=".00" valida_valor_parcela="false" tipo_apuracao="1" inativo="false"/>
+	<curctb_lx_imposto_tipo aliquota=".00000" aliquota_fixa="false" gera_na_entrada="false" gera_na_saida="false" id_imposto="11" imposto="DICMS" incidencia="3" agrega_apos_desconto="true" agrega_apos_encargo="true" nome_tecnico="DICMS" obs_imposto="Diferencial de alíquota do ICMS" calculo_decimal="3" gera_na_loja="false" valor_min_arrecadacao=".00" valida_valor_parcela="false" tipo_apuracao="1" inativo="false"/>
+	<curctb_lx_imposto_tipo aliquota=".00000" aliquota_fixa="false" gera_na_entrada="false" gera_na_saida="false" id_imposto="12" imposto="ICMS-ST" incidencia="3" agrega_apos_desconto="true" agrega_apos_encargo="true" nome_tecnico="ICMS-ST" obs_imposto="ICMS por substituição tributária" calculo_decimal="3" gera_na_loja="false" valor_min_arrecadacao=".00" valida_valor_parcela="false" tipo_apuracao="1" inativo="false"/>
+	<curctb_lx_imposto_tipo aliquota=".00000" aliquota_fixa="false" gera_na_entrada="false" gera_na_saida="false" id_imposto="13" imposto="ICMS-STR" incidencia="3" agrega_apos_desconto="true" agrega_apos_encargo="true" nome_tecnico="ICMS-ST" obs_imposto="ICMS por substituição tributária retido" calculo_decimal="3" gera_na_loja="false" valor_min_arrecadacao=".00" valida_valor_parcela="false" tipo_apuracao="1" inativo="false"/>
+	<curctb_lx_imposto_tipo aliquota="1.50000" aliquota_fixa="true" gera_na_entrada="false" gera_na_saida="false" id_imposto="14" imposto="ISS" incidencia="3" agrega_apos_desconto="false" agrega_apos_encargo="false" nome_tecnico="ISS" obs_imposto="ISS retido para o fornecedor nas compras ou a recolher nas vendas de serviços." calculo_decimal="0" gera_na_loja="false" valor_min_arrecadacao=".00" valida_valor_parcela="false" tipo_apuracao="1" inativo="false"/>
+	<curctb_lx_imposto_tipo aliquota="15.00000" aliquota_fixa="true" gera_na_entrada="false" gera_na_saida="false" id_imposto="10" imposto="IRPF" incidencia="2" agrega_apos_desconto="true" agrega_apos_encargo="true" nome_tecnico="IRPF - EUROPA" obs_imposto="Somente pessoa fisicas nos tipos de operacaode srevico 201 202 205" calculo_decimal="0" gera_na_loja="false" valor_min_arrecadacao=".00" valida_valor_parcela="false" tipo_apuracao="1" inativo="false"/>
+	<curctb_lx_imposto_tipo aliquota="16.00000" aliquota_fixa="false" gera_na_entrada="false" gera_na_saida="false" id_imposto="15" imposto="IVA-IC" incidencia="1" agrega_apos_desconto="false" agrega_apos_encargo="false" nome_tecnico="IVA" obs_imposto="IVA intra-comunitário." calculo_decimal="0" gera_na_loja="false" valor_min_arrecadacao=".00" valida_valor_parcela="false" tipo_apuracao="1" inativo="false"/>
+	<curctb_lx_imposto_tipo aliquota="4.65000" aliquota_fixa="true" gera_na_entrada="false" gera_na_saida="false" id_imposto="16" imposto="PC-CSL" incidencia="2" agrega_apos_desconto="false" agrega_apos_encargo="true" nome_tecnico="CSLL" obs_imposto="PIS+COFINS+CSLL  (cod.5952) a ser recolhido para o fornecedor nas compras de serviços." calculo_decimal="0" gera_na_loja="false" valor_min_arrecadacao=".00" valida_valor_parcela="false" tipo_apuracao="1" inativo="false"/>
+	<curctb_lx_imposto_tipo aliquota=".65000" aliquota_fixa="true" gera_na_entrada="false" gera_na_saida="false" id_imposto="17" imposto="PIS-R" incidencia="2" agrega_apos_desconto="false" agrega_apos_encargo="true" nome_tecnico="PIS" obs_imposto="PIS a ser retido pelo cliente nas vendas de serviços." calculo_decimal="0" gera_na_loja="false" valor_min_arrecadacao="32.50" valida_valor_parcela="false" tipo_apuracao="1" inativo="false"/>
+	<curctb_lx_imposto_tipo aliquota="3.00000" aliquota_fixa="true" gera_na_entrada="false" gera_na_saida="false" id_imposto="18" imposto="COFINS-R" incidencia="2" agrega_apos_desconto="false" agrega_apos_encargo="true" nome_tecnico="COFINS" obs_imposto="COFINS a ser retido pelo cliente nas vendas de serviços." calculo_decimal="0" gera_na_loja="false" valor_min_arrecadacao="149.50" valida_valor_parcela="false" tipo_apuracao="1" inativo="false"/>
+	<curctb_lx_imposto_tipo aliquota="1.00000" aliquota_fixa="true" gera_na_entrada="false" gera_na_saida="false" id_imposto="19" imposto="CSLL-R" incidencia="2" agrega_apos_desconto="false" agrega_apos_encargo="true" nome_tecnico="CSLL" obs_imposto="CSLL a ser retido pelo cliente nas vendas de serviços." calculo_decimal="0" gera_na_loja="false" valor_min_arrecadacao="50.00" valida_valor_parcela="false" tipo_apuracao="1" inativo="false"/>
+	<curctb_lx_imposto_tipo aliquota="1.50000" aliquota_fixa="true" gera_na_entrada="false" gera_na_saida="false" id_imposto="20" imposto="IRRF-R" incidencia="2" agrega_apos_desconto="true" agrega_apos_encargo="true" nome_tecnico="IRRF" obs_imposto="IRRF a ser retido pelo cliente nas vendas de serviços." calculo_decimal="0" gera_na_loja="false" valor_min_arrecadacao="10.00" valida_valor_parcela="false" tipo_apuracao="1" inativo="false"/>
+	<curctb_lx_imposto_tipo aliquota="11.00000" aliquota_fixa="true" gera_na_entrada="false" gera_na_saida="false" id_imposto="21" imposto="INSS-R" incidencia="2" agrega_apos_desconto="true" agrega_apos_encargo="true" nome_tecnico="INSS" obs_imposto="INSS a ser retido pelo cliente nas vendas de serviços." calculo_decimal="0" gera_na_loja="false" valor_min_arrecadacao="10.00" valida_valor_parcela="false" tipo_apuracao="1" inativo="false"/>
+	<curctb_lx_imposto_tipo aliquota="1.50000" aliquota_fixa="true" gera_na_entrada="false" gera_na_saida="false" id_imposto="22" imposto="ISS-R" incidencia="2" agrega_apos_desconto="false" agrega_apos_encargo="false" nome_tecnico="ISS" obs_imposto="ISS a ser retido pelo cliente nas vendas de serviços." calculo_decimal="0" gera_na_loja="false" valor_min_arrecadacao="10.00" valida_valor_parcela="false" tipo_apuracao="1" inativo="false"/>
+	<curctb_lx_imposto_tipo aliquota=".65000" aliquota_fixa="true" gera_na_entrada="false" gera_na_saida="false" id_imposto="23" imposto="PIS-S" incidencia="2" agrega_apos_desconto="false" agrega_apos_encargo="false" nome_tecnico="PIS" obs_imposto="PIS (cod.5979) a ser recolhido em separado p/o fornecedor na compra de serviço." calculo_decimal="0" gera_na_loja="false" valor_min_arrecadacao="32.50" valida_valor_parcela="false" tipo_apuracao="1" inativo="false"/>
+	<curctb_lx_imposto_tipo aliquota="3.00000" aliquota_fixa="true" gera_na_entrada="false" gera_na_saida="false" id_imposto="24" imposto="COFINS-S" incidencia="2" agrega_apos_desconto="false" agrega_apos_encargo="false" nome_tecnico="COFINS" obs_imposto="COFINS (cod.5960) a ser recolhido em separado p/o fornecedor na compra de serviço." calculo_decimal="0" gera_na_loja="false" valor_min_arrecadacao="149.50" valida_valor_parcela="false" tipo_apuracao="1" inativo="false"/>
+	<curctb_lx_imposto_tipo aliquota="1.00000" aliquota_fixa="true" gera_na_entrada="false" gera_na_saida="false" id_imposto="25" imposto="CSLL-S" incidencia="2" agrega_apos_desconto="false" agrega_apos_encargo="false" nome_tecnico="CSLL" obs_imposto="CSLL (cod.5987) a ser recolhido em separado p/o fornecedor na compra de serviço." calculo_decimal="0" gera_na_loja="false" valor_min_arrecadacao="50.00" valida_valor_parcela="false" tipo_apuracao="1" inativo="false"/>
+	<curctb_lx_imposto_tipo aliquota=".00000" aliquota_fixa="false" gera_na_entrada="false" gera_na_saida="false" id_imposto="26" imposto="RTEIVA" incidencia="1" agrega_apos_desconto="false" agrega_apos_encargo="false" nome_tecnico="RTEIVA" id_imposto_apurar="26" calculo_decimal="0" gera_na_loja="false" valor_min_arrecadacao=".00" valida_valor_parcela="false" tipo_apuracao="1" inativo="false"/>
+	<curctb_lx_imposto_tipo aliquota=".00000" aliquota_fixa="false" gera_na_entrada="false" gera_na_saida="false" id_imposto="36" imposto="ICMS-ZF" incidencia="2" agrega_apos_desconto="false" agrega_apos_encargo="false" nome_tecnico="ICMS ZONA FRANCA" id_imposto_apurar="36" calculo_decimal="0" gera_na_loja="false" valor_min_arrecadacao=".00" valida_valor_parcela="false" tipo_apuracao="1" inativo="false"/>
+	<curctb_lx_imposto_tipo aliquota=".00000" aliquota_fixa="false" gera_na_entrada="false" gera_na_saida="false" id_imposto="37" imposto="PIS-ZF" incidencia="2" agrega_apos_desconto="false" agrega_apos_encargo="false" nome_tecnico="PIS ZONA FRANCA" id_imposto_apurar="37" calculo_decimal="0" gera_na_loja="false" valor_min_arrecadacao=".00" valida_valor_parcela="false" tipo_apuracao="1" inativo="false"/>
+	<curctb_lx_imposto_tipo aliquota=".00000" aliquota_fixa="false" gera_na_entrada="false" gera_na_saida="false" id_imposto="38" imposto="COFINS-ZF" incidencia="2" agrega_apos_desconto="false" agrega_apos_encargo="false" nome_tecnico="COFINS ZONA FRANCA" id_imposto_apurar="38" calculo_decimal="0" gera_na_loja="false" valor_min_arrecadacao=".00" valida_valor_parcela="false" tipo_apuracao="1" inativo="false"/>
+</VFPData>

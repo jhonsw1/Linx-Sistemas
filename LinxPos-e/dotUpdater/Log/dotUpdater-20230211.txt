@@ -1,0 +1,6 @@
+23:50:54(P120479-Jonathan.Mantovani): Processo dotUpdater iniciado
+23:50:54(P120479-Jonathan.Mantovani): Não foi possível estabelecer uma conexão com o WebService. Solução: Verifique se a loja está com Internet ou possui liberação de acesso.
+23:50:54(P120479-Jonathan.Mantovani): Processo finalizado com erros.
+23:59:54(P120479-Jonathan.Mantovani): Processo dotUpdater iniciado
+23:59:55(P120479-Jonathan.Mantovani): Todos os arquivos do sistemas estão atualizados
+23:59:55(P120479-Jonathan.Mantovani): Processo finalizado com sucesso.

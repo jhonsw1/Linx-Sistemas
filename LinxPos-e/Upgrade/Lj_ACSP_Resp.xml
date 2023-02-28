@@ -1,0 +1,52 @@
+<?xml version = "1.0" encoding="Windows-1252" standalone="yes"?>
+<VFPData>
+	<xsd:schema id="VFPData" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="VFPData" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="curLJ_ACSP_Resp" minOccurs="0" maxOccurs="unbounded">
+						<xsd:complexType>
+							<xsd:attribute name="id_resp_acsp" type="xsd:int" use="required"/>
+							<xsd:attribute name="descricao" use="required">
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:string">
+										<xsd:maxLength value="60"/>
+									</xsd:restriction>
+								</xsd:simpleType>
+							</xsd:attribute>
+							<xsd:attribute name="id_resp_linx" type="xsd:int" use="required"/>
+							<xsd:attribute name="exibe_mensagem_display" type="xsd:boolean"/>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+				<xsd:anyAttribute namespace="http://www.w3.org/XML/1998/namespace" processContents="lax"/>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<curLJ_ACSP_Resp id_resp_acsp="0" descricao="Não existe restrição" id_resp_linx="0" exibe_mensagem_display="1"/>
+	<curLJ_ACSP_Resp id_resp_acsp="3" descricao="Terminal/Estabelecimento não autorizado para acesso" id_resp_linx="1" exibe_mensagem_display="1"/>
+	<curLJ_ACSP_Resp id_resp_acsp="6" descricao="Inconsistências" id_resp_linx="1" exibe_mensagem_display="1"/>
+	<curLJ_ACSP_Resp id_resp_acsp="43" descricao="Constam ocorrências de débitos ou títulos protestados" id_resp_linx="1" exibe_mensagem_display="1"/>
+	<curLJ_ACSP_Resp id_resp_acsp="44" descricao="Cheque sustado" id_resp_linx="1" exibe_mensagem_display="1"/>
+	<curLJ_ACSP_Resp id_resp_acsp="46" descricao="Cheque sustado com outro documento" id_resp_linx="1" exibe_mensagem_display="1"/>
+	<curLJ_ACSP_Resp id_resp_acsp="47" descricao="Mensagem da instituição financeira" id_resp_linx="1" exibe_mensagem_display="1"/>
+	<curLJ_ACSP_Resp id_resp_acsp="48" descricao="Talão sustado" id_resp_linx="1" exibe_mensagem_display="1"/>
+	<curLJ_ACSP_Resp id_resp_acsp="49" descricao="Consta para o banco, agência e conta informados outro doc" id_resp_linx="1" exibe_mensagem_display="1"/>
+	<curLJ_ACSP_Resp id_resp_acsp="50" descricao="Talão sustado com outro documento" id_resp_linx="1" exibe_mensagem_display="1"/>
+	<curLJ_ACSP_Resp id_resp_acsp="51" descricao="Constam cheques sustados pelo motivo 21" id_resp_linx="1" exibe_mensagem_display="1"/>
+	<curLJ_ACSP_Resp id_resp_acsp="52" descricao="Constam cheques devolvidos pela segunda apresentação" id_resp_linx="1" exibe_mensagem_display="1"/>
+	<curLJ_ACSP_Resp id_resp_acsp="53" descricao="Constam ceques devolvidos por prática espúria" id_resp_linx="1" exibe_mensagem_display="1"/>
+	<curLJ_ACSP_Resp id_resp_acsp="54" descricao="Constam cheques devolvidos por conta encerrada" id_resp_linx="1" exibe_mensagem_display="1"/>
+	<curLJ_ACSP_Resp id_resp_acsp="55" descricao="Constam cheques devolvidos por outros motivos" id_resp_linx="1" exibe_mensagem_display="1"/>
+	<curLJ_ACSP_Resp id_resp_acsp="56" descricao="Constam cheques devolvidos por mais de um motivo" id_resp_linx="1" exibe_mensagem_display="1"/>
+	<curLJ_ACSP_Resp id_resp_acsp="57" descricao="Constam cheques devolvidos pelo motivo 21" id_resp_linx="1" exibe_mensagem_display="1"/>
+	<curLJ_ACSP_Resp id_resp_acsp="58" descricao="Constam cheques devolvidos informados por associados" id_resp_linx="1" exibe_mensagem_display="1"/>
+	<curLJ_ACSP_Resp id_resp_acsp="59" descricao="Constam inf. de cheques emitidos anteriormente, no dia e pré" id_resp_linx="1" exibe_mensagem_display="1"/>
+	<curLJ_ACSP_Resp id_resp_acsp="60" descricao="Requer informações adicionais" id_resp_linx="1" exibe_mensagem_display="1"/>
+	<curLJ_ACSP_Resp id_resp_acsp="61" descricao="Resposta parametrizada RESTRITIVA" id_resp_linx="1" exibe_mensagem_display="1"/>
+	<curLJ_ACSP_Resp id_resp_acsp="62" descricao="Resposta parametrizada NEGATIVA" id_resp_linx="1" exibe_mensagem_display="1"/>
+	<curLJ_ACSP_Resp id_resp_acsp="63" descricao="Constam consultas anteriores" id_resp_linx="1" exibe_mensagem_display="1"/>
+	<curLJ_ACSP_Resp id_resp_acsp="89" descricao="Mensagem genérica (outras)" id_resp_linx="1" exibe_mensagem_display="1"/>
+	<curLJ_ACSP_Resp id_resp_acsp="91" descricao="Sistema fora de Operação" id_resp_linx="1" exibe_mensagem_display="1"/>
+	<curLJ_ACSP_Resp id_resp_acsp="131" descricao="Serviço indisponível" id_resp_linx="1" exibe_mensagem_display="1"/>
+</VFPData>

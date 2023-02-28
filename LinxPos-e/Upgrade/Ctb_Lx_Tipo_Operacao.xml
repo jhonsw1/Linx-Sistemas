@@ -1,0 +1,142 @@
+<?xml version = "1.0" encoding="Windows-1252" standalone="yes"?>
+<VFPData>
+	<xsd:schema id="VFPData" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="VFPData" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="curctb_lx_tipo_operacao" minOccurs="0" maxOccurs="unbounded">
+						<xsd:complexType>
+							<xsd:attribute name="ctb_tipo_operacao" type="xsd:int" use="required"/>
+							<xsd:attribute name="desc_tipo_operacao" use="required">
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:string">
+										<xsd:maxLength value="40"/>
+									</xsd:restriction>
+								</xsd:simpleType>
+							</xsd:attribute>
+							<xsd:attribute name="gera_financeiro" type="xsd:boolean" use="required"/>
+							<xsd:attribute name="indica_entrada_saida" use="required">
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:string">
+										<xsd:maxLength value="1"/>
+									</xsd:restriction>
+								</xsd:simpleType>
+							</xsd:attribute>
+							<xsd:attribute name="tipo_operacao" use="required">
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:string">
+										<xsd:maxLength value="1"/>
+									</xsd:restriction>
+								</xsd:simpleType>
+							</xsd:attribute>
+							<xsd:attribute name="inativo" type="xsd:boolean" use="required"/>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+				<xsd:anyAttribute namespace="http://www.w3.org/XML/1998/namespace" processContents="lax"/>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="100" desc_tipo_operacao="VENDA DE MERCADORIA" gera_financeiro="true" indica_entrada_saida="S" tipo_operacao="V" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="101" desc_tipo_operacao="VENDA DE SERVIÇO DE INDUSTRIALIZAÇÃO" gera_financeiro="true" indica_entrada_saida="S" tipo_operacao="E" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="102" desc_tipo_operacao="VENDA DE SERVIÇO" gera_financeiro="true" indica_entrada_saida="S" tipo_operacao="V" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="103" desc_tipo_operacao="VENDA MERCADORIA DEPOSITADA EM ARMAZÉM" gera_financeiro="true" indica_entrada_saida="S" tipo_operacao="V" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="104" desc_tipo_operacao="VENDA SOB REGIME DRAWBACK" gera_financeiro="true" indica_entrada_saida="S" tipo_operacao="V" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="105" desc_tipo_operacao="VENDA EFETUADA FORA DO ESTABELECIMENTO" gera_financeiro="true" indica_entrada_saida="S" tipo_operacao="V" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="106" desc_tipo_operacao="VENDA MERC.REMETIDA EM CONSIG.INDUSTRIAL" gera_financeiro="true" indica_entrada_saida="S" tipo_operacao="V" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="107" desc_tipo_operacao="VENDA MERC.REMETIDA EM CONSIG.COMERCIAL" gera_financeiro="true" indica_entrada_saida="S" tipo_operacao="V" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="108" desc_tipo_operacao="VENDA C/ENTREGA FUTURA" gera_financeiro="false" indica_entrada_saida="S" tipo_operacao="V" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="109" desc_tipo_operacao="VENDA C/ENTREGA À ORDEM" gera_financeiro="true" indica_entrada_saida="S" tipo_operacao="V" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="110" desc_tipo_operacao="VENDA C/REMESSA P/INDUSTRIALIZ. À ORDEM" gera_financeiro="true" indica_entrada_saida="S" tipo_operacao="V" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="111" desc_tipo_operacao="VENDA INDUSTRIALIZAÇÃO C/RECEBTO À ORDEM" gera_financeiro="true" indica_entrada_saida="S" tipo_operacao="E" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="115" desc_tipo_operacao="VENDA C/FATURAMENTO FUTURO" gera_financeiro="false" indica_entrada_saida="S" tipo_operacao="G" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="116" desc_tipo_operacao="NF DEVOLUÇÃO DE COMPRA C/FAT.ABONO FUT." gera_financeiro="false" indica_entrada_saida="S" tipo_operacao="N" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="117" desc_tipo_operacao="FATURA DE ABONO DE NF. DEVOLUÇÃO VENDA" gera_financeiro="true" indica_entrada_saida="S" tipo_operacao="D" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="120" desc_tipo_operacao="TRANSFERÊNCIA EXPEDIDA" gera_financeiro="false" indica_entrada_saida="S" tipo_operacao="T" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="121" desc_tipo_operacao="TRANSFERÊNCIA DE MERCADORIA EM ARMAZÉM" gera_financeiro="false" indica_entrada_saida="S" tipo_operacao="T" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="122" desc_tipo_operacao="DEVOL.TRANSF.RECEBIDA P/INDUSTRIALIZAÇÃO" gera_financeiro="false" indica_entrada_saida="S" tipo_operacao="T" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="123" desc_tipo_operacao="DEVOL.TRANSF.RECEBIDA P/COMERCIALIZAÇÃO" gera_financeiro="false" indica_entrada_saida="S" tipo_operacao="T" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="130" desc_tipo_operacao="REMESSA DE MATERIAL P/INDUSTRIALIZAÇÃO" gera_financeiro="false" indica_entrada_saida="S" tipo_operacao="R" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="131" desc_tipo_operacao="REMESSA S/RETORNO FUTURO" gera_financeiro="false" indica_entrada_saida="S" tipo_operacao="O" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="132" desc_tipo_operacao="REMESSA C/RETORNO FUTURO" gera_financeiro="false" indica_entrada_saida="S" tipo_operacao="R" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="133" desc_tipo_operacao="REMESSA P/DEMONSTRAÇÃO" gera_financeiro="false" indica_entrada_saida="S" tipo_operacao="R" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="134" desc_tipo_operacao="REMESSA P/CONSERTO OU REPARO" gera_financeiro="false" indica_entrada_saida="S" tipo_operacao="R" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="135" desc_tipo_operacao="REMESSA DE MERCADORIA P/CONSIGNAÇÃO" gera_financeiro="false" indica_entrada_saida="S" tipo_operacao="R" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="136" desc_tipo_operacao="REMESSA P/FINS ESPECÍFICOS DE EXPORTAÇÃO" gera_financeiro="true" indica_entrada_saida="S" tipo_operacao="V" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="137" desc_tipo_operacao="REMESSA EM VENDA À ORDEM" gera_financeiro="false" indica_entrada_saida="S" tipo_operacao="O" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="138" desc_tipo_operacao="REMESSA P/INDUSTRIALIZAÇÃO À ORDEM" gera_financeiro="false" indica_entrada_saida="S" tipo_operacao="R" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="139" desc_tipo_operacao="REMESSA DE BEM EM COMODATO" gera_financeiro="false" indica_entrada_saida="S" tipo_operacao="O" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="140" desc_tipo_operacao="RETORNO (SIMB) MATERIAL INDUSTRIALIZAÇÃO" gera_financeiro="false" indica_entrada_saida="S" tipo_operacao="E" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="141" desc_tipo_operacao="RETORNO MATERIAL NÃO UTILIZADO NA IND." gera_financeiro="false" indica_entrada_saida="S" tipo_operacao="E" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="142" desc_tipo_operacao="RETORNO SIMPLES - SAÍDA" gera_financeiro="false" indica_entrada_saida="S" tipo_operacao="E" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="143" desc_tipo_operacao="RETORNO MERCADORIA RECEBIDA Á ORDEM" gera_financeiro="false" indica_entrada_saida="S" tipo_operacao="O" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="150" desc_tipo_operacao="DEVOL. / ANULAÇÃO DE COMPRA" gera_financeiro="true" indica_entrada_saida="S" tipo_operacao="D" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="151" desc_tipo_operacao="DEVOL. DE COMPRA S/REGIME DRAWBACK" gera_financeiro="true" indica_entrada_saida="S" tipo_operacao="D" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="160" desc_tipo_operacao="SIMPLES FATURAMENTO" gera_financeiro="true" indica_entrada_saida="S" tipo_operacao="V" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="170" desc_tipo_operacao="SAÍDA P/RECLASSIFICAÇÃO DE MATERIAL" gera_financeiro="false" indica_entrada_saida="S" tipo_operacao="O" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="171" desc_tipo_operacao="BAIXA DE ESTOQUE POR PERDA DO MATERIAL" gera_financeiro="false" indica_entrada_saida="S" tipo_operacao="O" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="172" desc_tipo_operacao="BAIXA DE ESTOQUE ENCERRAMENTO DA EMPRESA" gera_financeiro="false" indica_entrada_saida="S" tipo_operacao="O" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="173" desc_tipo_operacao="RETENÇÃO DA SUBSTITUIÇÃO TRIBUTÁRIA" gera_financeiro="false" indica_entrada_saida="S" tipo_operacao="O" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="180" desc_tipo_operacao="VENDA MERC. NA CONDIÇÃO DE SUBSTITUTO" gera_financeiro="true" indica_entrada_saida="S" tipo_operacao="V" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="190" desc_tipo_operacao="OPERAÇÃO JÁ REGISTRADA EM E.C.F." gera_financeiro="false" indica_entrada_saida="S" tipo_operacao="O" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="199" desc_tipo_operacao="OUTRAS SAÍDAS NÃO ESPECIFICADAS" gera_financeiro="false" indica_entrada_saida="S" tipo_operacao="O" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="200" desc_tipo_operacao="COMPRA DE MERCADORIA" gera_financeiro="true" indica_entrada_saida="E" tipo_operacao="C" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="201" desc_tipo_operacao="COMPRA DE SERVIÇO DE INDUSTRIALIZAÇÃO" gera_financeiro="true" indica_entrada_saida="E" tipo_operacao="E" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="202" desc_tipo_operacao="COMPRA DE SERVIÇOS DIVERSOS" gera_financeiro="true" indica_entrada_saida="E" tipo_operacao="C" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="205" desc_tipo_operacao="COMPRA SERV.INDL.C/MAT.REMETIDO À ORDEM" gera_financeiro="true" indica_entrada_saida="E" tipo_operacao="E" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="208" desc_tipo_operacao="COMPRA C/RECEBIMENTO FUTURO" gera_financeiro="false" indica_entrada_saida="E" tipo_operacao="O" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="209" desc_tipo_operacao="COMPRA C/ENTREGA À ORDEM" gera_financeiro="true" indica_entrada_saida="E" tipo_operacao="C" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="210" desc_tipo_operacao="COMPRA C/REMESSA P/INDUSTRIAL. À ORDEM" gera_financeiro="true" indica_entrada_saida="E" tipo_operacao="C" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="215" desc_tipo_operacao="COMPRA C/FATURAMENTO FUTURO" gera_financeiro="false" indica_entrada_saida="E" tipo_operacao="G" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="216" desc_tipo_operacao="FATURA DE ABONO DE NF.DEVOLUÇÃO COMPRA" gera_financeiro="true" indica_entrada_saida="E" tipo_operacao="D" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="217" desc_tipo_operacao="NF DEVOLUÇÃO DE VENDA C/FAT.ABONO FUT." gera_financeiro="false" indica_entrada_saida="E" tipo_operacao="N" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="220" desc_tipo_operacao="TRANSF. RECEBIDA P/INDUSTRIALIZAÇÃO" gera_financeiro="false" indica_entrada_saida="E" tipo_operacao="T" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="221" desc_tipo_operacao="TRANSF. RECEBIDA P/COMERCIALIZAÇÃO" gera_financeiro="false" indica_entrada_saida="E" tipo_operacao="T" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="222" desc_tipo_operacao="DEVOL. DE TRANSFERÊNCIA" gera_financeiro="false" indica_entrada_saida="E" tipo_operacao="T" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="230" desc_tipo_operacao="RECEBIMENTO MATERIAL P/INDUSTRIALIZAÇÃO" gera_financeiro="false" indica_entrada_saida="E" tipo_operacao="R" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="231" desc_tipo_operacao="RECEBIMENTO C/RETORNO FUTURO" gera_financeiro="false" indica_entrada_saida="E" tipo_operacao="R" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="232" desc_tipo_operacao="RECEBIMENTO S/RETORNO FUTURO" gera_financeiro="false" indica_entrada_saida="E" tipo_operacao="O" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="233" desc_tipo_operacao="RECEBIMENTO P/DEMONSTRAÇÃO" gera_financeiro="false" indica_entrada_saida="E" tipo_operacao="O" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="234" desc_tipo_operacao="RECEBIMENTO P/CONSERTO OU REPARO" gera_financeiro="false" indica_entrada_saida="E" tipo_operacao="O" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="235" desc_tipo_operacao="RECEBIMENTO EM CONSIGNAÇÃO" gera_financeiro="false" indica_entrada_saida="E" tipo_operacao="O" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="236" desc_tipo_operacao="RECEBIMENTO P/FINS DE EXPORTAÇÃO" gera_financeiro="true" indica_entrada_saida="E" tipo_operacao="C" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="237" desc_tipo_operacao="RECEBIMENTO EM COMPRA À ORDEM" gera_financeiro="false" indica_entrada_saida="E" tipo_operacao="O" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="238" desc_tipo_operacao="RECEBIMENTO P/INDUSTRIALIZAÇÃO À ORDEM" gera_financeiro="false" indica_entrada_saida="E" tipo_operacao="R" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="240" desc_tipo_operacao="RETORNO (SIMB) MATERIAL INDUSTRIALIZAÇÃO" gera_financeiro="false" indica_entrada_saida="E" tipo_operacao="E" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="241" desc_tipo_operacao="RETORNO MATERIAL NÃO UTILIZADO NA IND." gera_financeiro="false" indica_entrada_saida="E" tipo_operacao="E" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="242" desc_tipo_operacao="RETORNO SIMPLES - ENTRADA" gera_financeiro="false" indica_entrada_saida="E" tipo_operacao="E" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="243" desc_tipo_operacao="RETORNO REMESSA P/VENDA FORA DO ESTAB." gera_financeiro="false" indica_entrada_saida="E" tipo_operacao="O" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="244" desc_tipo_operacao="RETORNO REMESSA EM DEMONSTRAÇÃO" gera_financeiro="false" indica_entrada_saida="E" tipo_operacao="O" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="245" desc_tipo_operacao="RETORNO REMESSA P/CONSERTO OU REPARO" gera_financeiro="false" indica_entrada_saida="E" tipo_operacao="O" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="246" desc_tipo_operacao="RETORNO REMESSA P/INDUSTRIAL. À ORDEM" gera_financeiro="false" indica_entrada_saida="E" tipo_operacao="O" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="247" desc_tipo_operacao="RETORNO REMESSA EM COMODATO" gera_financeiro="false" indica_entrada_saida="E" tipo_operacao="O" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="250" desc_tipo_operacao="DEVOL. / ANULAÇÃO DE VENDA" gera_financeiro="true" indica_entrada_saida="E" tipo_operacao="D" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="251" desc_tipo_operacao="DEVOL. REMESSA PARA EXPORTAÇÃO" gera_financeiro="true" indica_entrada_saida="E" tipo_operacao="D" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="252" desc_tipo_operacao="DEVOL. REMESSA CONSIG. INDL/COML" gera_financeiro="false" indica_entrada_saida="E" tipo_operacao="E" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="253" desc_tipo_operacao="DEVOL. (SIMB) REMESSA CONSIG. INDL/COML" gera_financeiro="false" indica_entrada_saida="E" tipo_operacao="E" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="260" desc_tipo_operacao="SIMPLES FATURAMENTO" gera_financeiro="true" indica_entrada_saida="E" tipo_operacao="C" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="270" desc_tipo_operacao="ENTRADA P/RECLASSIFICAÇÃO DE MATERIAL" gera_financeiro="false" indica_entrada_saida="E" tipo_operacao="O" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="299" desc_tipo_operacao="OUTRAS ENTRADAS NÃO ESPECIFICADAS" gera_financeiro="false" indica_entrada_saida="E" tipo_operacao="O" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="290" desc_tipo_operacao="DEVOL. VENDA LOJA - NAO GERA FINANCEIRO" gera_financeiro="false" indica_entrada_saida="E" tipo_operacao="D" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="144" desc_tipo_operacao="RETORNO MERC. RECEB. P/DEMONSTRAÇÃO" gera_financeiro="false" indica_entrada_saida="S" tipo_operacao="E" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="145" desc_tipo_operacao="RETORNO MERC. OU BEM RECEB. P/CONSERTO" gera_financeiro="false" indica_entrada_saida="S" tipo_operacao="E" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="206" desc_tipo_operacao="COMPRA MERC. CONSIG. INDL/COML" gera_financeiro="true" indica_entrada_saida="E" tipo_operacao="C" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="129" desc_tipo_operacao="REMESSA P/VENDA FORA ESTABELECIMENTO" gera_financeiro="false" indica_entrada_saida="S" tipo_operacao="O" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="147" desc_tipo_operacao="RETORNO (SIMB) MERC. DEPOSITADA DEPÓSITO" gera_financeiro="false" indica_entrada_saida="S" tipo_operacao="E" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="146" desc_tipo_operacao="RETORNO MERC. DEPOSITADA EM DEPÓSITO" gera_financeiro="false" indica_entrada_saida="S" tipo_operacao="E" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="152" desc_tipo_operacao="DEVOL. RECEBIMENTO EM CONSIGNAÇÃO" gera_financeiro="false" indica_entrada_saida="S" tipo_operacao="E" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="153" desc_tipo_operacao="DEVOL. (SIMB) RECEBTO EM CONSIGNAÇÃO" gera_financeiro="false" indica_entrada_saida="S" tipo_operacao="E" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="227" desc_tipo_operacao="RECEBIMENTO MERC.P/ARMAZEM OU DEPÓSITO" gera_financeiro="false" indica_entrada_saida="E" tipo_operacao="O" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="128" desc_tipo_operacao="REMESSA P/BONIFICAÇÃO/DOAÇÃO/BRINDE" gera_financeiro="false" indica_entrada_saida="S" tipo_operacao="O" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="181" desc_tipo_operacao="VENDA P/USO INDUSTRIALIZAÇÃO" gera_financeiro="true" indica_entrada_saida="S" tipo_operacao="V" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="182" desc_tipo_operacao="VENDA P/COMERCIALIZAÇÃO" gera_financeiro="true" indica_entrada_saida="S" tipo_operacao="V" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="183" desc_tipo_operacao="VENDA P/USO OU CONSUMO" gera_financeiro="true" indica_entrada_saida="S" tipo_operacao="V" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="281" desc_tipo_operacao="DEVOL. VENDA P/USO INDUSTRIALIZAÇÃO" gera_financeiro="true" indica_entrada_saida="E" tipo_operacao="D" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="282" desc_tipo_operacao="DEVOL. VENDA P/COMERCIALIZAÇÃO" gera_financeiro="true" indica_entrada_saida="E" tipo_operacao="D" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="283" desc_tipo_operacao="DEVOL. VENDA P/USO OU CONSUMO" gera_financeiro="true" indica_entrada_saida="E" tipo_operacao="D" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="228" desc_tipo_operacao="RECEBIMENTO BONIFICAÇÃO/DOAÇÃO/BRINDE" gera_financeiro="false" indica_entrada_saida="E" tipo_operacao="O" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="239" desc_tipo_operacao="RECEBIMENTO DE BEM EM COMODATO" gera_financeiro="false" indica_entrada_saida="E" tipo_operacao="O" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="149" desc_tipo_operacao="RETORNO DE BEM RECEBIDO EM COMODATO" gera_financeiro="false" indica_entrada_saida="S" tipo_operacao="O" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="184" desc_tipo_operacao="VENDA DE LOJA NAO GERA FINANCEIRO" gera_financeiro="false" indica_entrada_saida="S" tipo_operacao="V" inativo="false"/>
+	<curctb_lx_tipo_operacao ctb_tipo_operacao="118" desc_tipo_operacao="VENDA MERC.RECEBIDA EM CONSIG.MERCANTIL" gera_financeiro="true" indica_entrada_saida="S" tipo_operacao="V" inativo="false"/>
+</VFPData>

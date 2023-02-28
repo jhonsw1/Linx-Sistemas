@@ -1,0 +1,24 @@
+11:35:56(P120479-Jonathan.Mantovani): Processo dotUpdater iniciado
+11:35:56(P120479-Jonathan.Mantovani): Não foi possível estabelecer uma conexão com o WebService. Solução: Verifique se a loja está com Internet ou possui liberação de acesso.
+11:35:56(P120479-Jonathan.Mantovani): Processo finalizado com erros.
+12:14:40(P120479-Jonathan.Mantovani): Processo dotUpdater iniciado
+12:14:40(P120479-Jonathan.Mantovani): Não foi possível estabelecer uma conexão com o WebService. Solução: Verifique se a loja está com Internet ou possui liberação de acesso.
+12:14:40(P120479-Jonathan.Mantovani): Processo finalizado com erros.
+12:23:33(P120479-Jonathan.Mantovani): Processo dotUpdater iniciado
+12:23:33(P120479-Jonathan.Mantovani): Todos os arquivos do sistemas estão atualizados
+12:23:33(P120479-Jonathan.Mantovani): Processo finalizado com sucesso.
+12:28:57(P120479-Jonathan.Mantovani): Processo dotUpdater iniciado
+12:28:57(P120479-Jonathan.Mantovani): Todos os arquivos do sistemas estão atualizados
+12:28:57(P120479-Jonathan.Mantovani): Processo finalizado com sucesso.
+12:29:45(P120479-Jonathan.Mantovani): Processo dotUpdater iniciado
+12:29:45(P120479-Jonathan.Mantovani): Todos os arquivos do sistemas estão atualizados
+12:29:45(P120479-Jonathan.Mantovani): Processo finalizado com sucesso.
+12:52:20(P120479-Jonathan.Mantovani): Processo dotUpdater iniciado
+12:52:20(P120479-Jonathan.Mantovani): Todos os arquivos do sistemas estão atualizados
+12:52:20(P120479-Jonathan.Mantovani): Processo finalizado com sucesso.
+12:55:35(P120479-Jonathan.Mantovani): Processo dotUpdater iniciado
+12:55:35(P120479-Jonathan.Mantovani): Todos os arquivos do sistemas estão atualizados
+12:55:35(P120479-Jonathan.Mantovani): Processo finalizado com sucesso.
+14:54:23(P120479-Jonathan.Mantovani): Processo dotUpdater iniciado
+14:54:23(P120479-Jonathan.Mantovani): Todos os arquivos do sistemas estão atualizados
+14:54:23(P120479-Jonathan.Mantovani): Processo finalizado com sucesso.

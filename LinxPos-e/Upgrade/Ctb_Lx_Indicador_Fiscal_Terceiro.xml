@@ -1,0 +1,40 @@
+<?xml version = "1.0" encoding="Windows-1252" standalone="yes"?>
+<VFPData>
+	<xsd:schema id="VFPData" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="VFPData" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="curctb_lx_indicador_fiscal_terceiro" minOccurs="0" maxOccurs="unbounded">
+						<xsd:complexType>
+							<xsd:attribute name="descricao_fiscal_terceiro" use="required">
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:string">
+										<xsd:maxLength value="40"/>
+									</xsd:restriction>
+								</xsd:simpleType>
+							</xsd:attribute>
+							<xsd:attribute name="indicador_fiscal_terceiro" type="xsd:int" use="required"/>
+							<xsd:attribute name="inativo" type="xsd:boolean" use="required"/>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+				<xsd:anyAttribute namespace="http://www.w3.org/XML/1998/namespace" processContents="lax"/>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<curctb_lx_indicador_fiscal_terceiro descricao_fiscal_terceiro="EMPRESA INDUSTRIAL/COMERCIAL" indicador_fiscal_terceiro="1" inativo="false"/>
+	<curctb_lx_indicador_fiscal_terceiro descricao_fiscal_terceiro="EMPRESA COMERCIAL" indicador_fiscal_terceiro="2" inativo="false"/>
+	<curctb_lx_indicador_fiscal_terceiro descricao_fiscal_terceiro="EMPRESA DE TRANSPORTE" indicador_fiscal_terceiro="3" inativo="false"/>
+	<curctb_lx_indicador_fiscal_terceiro descricao_fiscal_terceiro="EMPRESA DE COMUNICAÇÃO" indicador_fiscal_terceiro="4" inativo="false"/>
+	<curctb_lx_indicador_fiscal_terceiro descricao_fiscal_terceiro="DISTRIBUIDORA DE ENERGIA ELÉTRICA" indicador_fiscal_terceiro="5" inativo="false"/>
+	<curctb_lx_indicador_fiscal_terceiro descricao_fiscal_terceiro="MICRO EMPRESA" indicador_fiscal_terceiro="6" inativo="false"/>
+	<curctb_lx_indicador_fiscal_terceiro descricao_fiscal_terceiro="PRODUTOR RURAL" indicador_fiscal_terceiro="7" inativo="false"/>
+	<curctb_lx_indicador_fiscal_terceiro descricao_fiscal_terceiro="NÃO CONTRIBUINTE" indicador_fiscal_terceiro="8" inativo="false"/>
+	<curctb_lx_indicador_fiscal_terceiro descricao_fiscal_terceiro="ARMAZÉM GERAL / DEPOSITO" indicador_fiscal_terceiro="9" inativo="false"/>
+	<curctb_lx_indicador_fiscal_terceiro descricao_fiscal_terceiro="EMPRESA ESTRANGEIRA" indicador_fiscal_terceiro="10" inativo="false"/>
+	<curctb_lx_indicador_fiscal_terceiro descricao_fiscal_terceiro="AMBULANTE" indicador_fiscal_terceiro="11" inativo="false"/>
+	<curctb_lx_indicador_fiscal_terceiro descricao_fiscal_terceiro="FILIAL" indicador_fiscal_terceiro="12" inativo="true"/>
+	<curctb_lx_indicador_fiscal_terceiro descricao_fiscal_terceiro="ZONA FRANCA / LIVRE MERCADO" indicador_fiscal_terceiro="13" inativo="false"/>
+	<curctb_lx_indicador_fiscal_terceiro descricao_fiscal_terceiro="FEIRA / EXPOSICAO" indicador_fiscal_terceiro="14" inativo="false"/>
+	<curctb_lx_indicador_fiscal_terceiro descricao_fiscal_terceiro="SIMPLES NACIONAL" indicador_fiscal_terceiro="16" inativo="false"/>
+</VFPData>

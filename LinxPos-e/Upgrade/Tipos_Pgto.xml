@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="Windows-1252" standalone="yes"?>
+<VFPData>
+	<xsd:schema id="VFPData" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="VFPData" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="tipos_pgto" minOccurs="0" maxOccurs="unbounded">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="tipo_pgto">
+									<xsd:simpleType>
+										<xsd:restriction base="xsd:string">
+											<xsd:maxLength value="1"/>
+										</xsd:restriction>
+									</xsd:simpleType>
+								</xsd:element>
+								<xsd:element name="desc_tipo_pgto" minOccurs="0">
+									<xsd:simpleType>
+										<xsd:restriction base="xsd:string">
+											<xsd:maxLength value="40"/>
+										</xsd:restriction>
+									</xsd:simpleType>
+								</xsd:element>
+								<xsd:element name="tipo_a_vista" type="xsd:boolean"/>
+								<xsd:element name="data_para_transferencia" type="xsd:dateTime" minOccurs="0"/>
+								<xsd:element name="inativo" type="xsd:boolean"/>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+				<xsd:anyAttribute namespace="http://www.w3.org/XML/1998/namespace" processContents="lax"/>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<tipos_pgto>
+		<tipo_pgto>A</tipo_pgto>
+		<desc_tipo_pgto>CARTAO DE CREDITO POS</desc_tipo_pgto>
+		<tipo_a_vista>false</tipo_a_vista>
+		<data_para_transferencia>2003-09-17T19:06:28</data_para_transferencia>
+		<inativo>false</inativo>
+	</tipos_pgto>
+	<tipos_pgto>
+		<tipo_pgto>B</tipo_pgto>
+		<desc_tipo_pgto>CARTAO CREDITO MANUAL</desc_tipo_pgto>
+		<tipo_a_vista>false</tipo_a_vista>
+		<data_para_transferencia>2003-09-17T19:06:28</data_para_transferencia>
+		<inativo>false</inativo>
+	</tipos_pgto>
+	<tipos_pgto>
+		<tipo_pgto>C</tipo_pgto>
+		<desc_tipo_pgto>CHEQUE A VISTA</desc_tipo_pgto>
+		<tipo_a_vista>true</tipo_a_vista>
+		<data_para_transferencia>2003-09-17T19:06:28</data_para_transferencia>
+		<inativo>false</inativo>
+	</tipos_pgto>
+	<tipos_pgto>
+		<tipo_pgto>D</tipo_pgto>
+		<desc_tipo_pgto>DINHEIRO</desc_tipo_pgto>
+		<tipo_a_vista>true</tipo_a_vista>
+		<data_para_transferencia>2003-09-17T19:06:28</data_para_transferencia>
+		<inativo>false</inativo>
+	</tipos_pgto>
+	<tipos_pgto>
+		<tipo_pgto>E</tipo_pgto>
+		<desc_tipo_pgto>CARTAO DE DEBITO</desc_tipo_pgto>
+		<tipo_a_vista>true</tipo_a_vista>
+		<data_para_transferencia>2003-09-17T19:06:28</data_para_transferencia>
+		<inativo>false</inativo>
+	</tipos_pgto>
+	<tipos_pgto>
+		<tipo_pgto>F</tipo_pgto>
+		<desc_tipo_pgto>VALE FUNCIONARIO</desc_tipo_pgto>
+		<tipo_a_vista>false</tipo_a_vista>
+		<data_para_transferencia>2003-09-17T19:06:28</data_para_transferencia>
+		<inativo>false</inativo>
+	</tipos_pgto>
+	<tipos_pgto>
+		<tipo_pgto>H</tipo_pgto>
+		<desc_tipo_pgto>CONVENIO</desc_tipo_pgto>
+		<tipo_a_vista>true</tipo_a_vista>
+		<data_para_transferencia>2008-06-25T00:00:00</data_para_transferencia>
+		<inativo>false</inativo>
+	</tipos_pgto>
+	<tipos_pgto>
+		<tipo_pgto>I</tipo_pgto>
+		<desc_tipo_pgto>CARTAO CREDITO PDV</desc_tipo_pgto>
+		<tipo_a_vista>false</tipo_a_vista>
+		<data_para_transferencia>2003-09-17T19:06:28</data_para_transferencia>
+		<inativo>false</inativo>
+	</tipos_pgto>
+	<tipos_pgto>
+		<tipo_pgto>J</tipo_pgto>
+		<desc_tipo_pgto>DUPLICATA</desc_tipo_pgto>
+		<tipo_a_vista>false</tipo_a_vista>
+		<data_para_transferencia>2003-09-17T19:06:28</data_para_transferencia>
+		<inativo>false</inativo>
+	</tipos_pgto>
+	<tipos_pgto>
+		<tipo_pgto>K</tipo_pgto>
+		<desc_tipo_pgto>CARTAO DEBITO PDV</desc_tipo_pgto>
+		<tipo_a_vista>true</tipo_a_vista>
+		<data_para_transferencia>2003-09-17T19:06:28</data_para_transferencia>
+		<inativo>false</inativo>
+	</tipos_pgto>
+	<tipos_pgto>
+		<tipo_pgto>M</tipo_pgto>
+		<desc_tipo_pgto>OUTRAS MOEDAS</desc_tipo_pgto>
+		<tipo_a_vista>true</tipo_a_vista>
+		<data_para_transferencia>2003-09-17T19:06:28</data_para_transferencia>
+		<inativo>false</inativo>
+	</tipos_pgto>
+	<tipos_pgto>
+		<tipo_pgto>N</tipo_pgto>
+		<desc_tipo_pgto>INFOCARD</desc_tipo_pgto>
+		<tipo_a_vista>false</tipo_a_vista>
+		<data_para_transferencia>2000-01-01T00:00:00</data_para_transferencia>
+		<inativo>true</inativo>
+	</tipos_pgto>
+	<tipos_pgto>
+		<tipo_pgto>P</tipo_pgto>
+		<desc_tipo_pgto>CHEQUE PRE DATADO</desc_tipo_pgto>
+		<tipo_a_vista>false</tipo_a_vista>
+		<data_para_transferencia>2003-09-17T19:06:28</data_para_transferencia>
+		<inativo>false</inativo>
+	</tipos_pgto>
+	<tipos_pgto>
+		<tipo_pgto>R</tipo_pgto>
+		<desc_tipo_pgto>VALE PRODUTO</desc_tipo_pgto>
+		<tipo_a_vista>false</tipo_a_vista>
+		<data_para_transferencia>2003-09-17T19:06:28</data_para_transferencia>
+		<inativo>false</inativo>
+	</tipos_pgto>
+	<tipos_pgto>
+		<tipo_pgto>V</tipo_pgto>
+		<desc_tipo_pgto>VALE CLIENTE</desc_tipo_pgto>
+		<tipo_a_vista>false</tipo_a_vista>
+		<data_para_transferencia>2003-09-17T19:06:28</data_para_transferencia>
+		<inativo>false</inativo>
+	</tipos_pgto>
+	<tipos_pgto>
+		<tipo_pgto>X</tipo_pgto>
+		<desc_tipo_pgto>BRINDES / DOACAO PROMOCIONAL</desc_tipo_pgto>
+		<tipo_a_vista>false</tipo_a_vista>
+		<data_para_transferencia>2003-09-17T19:06:28</data_para_transferencia>
+		<inativo>false</inativo>
+	</tipos_pgto>
+	<tipos_pgto>
+		<tipo_pgto>&amp;</tipo_pgto>
+		<desc_tipo_pgto>VALE PRESENTE</desc_tipo_pgto>
+		<tipo_a_vista>false</tipo_a_vista>
+		<data_para_transferencia>2003-09-17T19:06:28</data_para_transferencia>
+		<inativo>false</inativo>
+	</tipos_pgto>
+	<tipos_pgto>
+		<tipo_pgto>#</tipo_pgto>
+		<desc_tipo_pgto>CREDIARIO</desc_tipo_pgto>
+		<tipo_a_vista>false</tipo_a_vista>
+		<data_para_transferencia>2003-09-17T19:06:28</data_para_transferencia>
+		<inativo>false</inativo>
+	</tipos_pgto>
+	<!-- Comentado. Não vamos criar automaticamente por enquanto.
+	<tipos_pgto>
+		<tipo_pgto>!</tipo_pgto>
+		<desc_tipo_pgto>TEF (TODOS)</desc_tipo_pgto>
+		<tipo_a_vista>false</tipo_a_vista>
+		<data_para_transferencia>2003-09-17T19:06:28</data_para_transferencia>
+		<inativo>true</inativo>
+	</tipos_pgto>
+	<tipos_pgto>
+		<tipo_pgto>?</tipo_pgto>
+		<desc_tipo_pgto>TEF (DÉBITO/CRÉDITO)</desc_tipo_pgto>
+		<tipo_a_vista>false</tipo_a_vista>
+		<data_para_transferencia>2003-09-17T19:06:28</data_para_transferencia>
+		<inativo>false</inativo>
+	</tipos_pgto>
+	-->
+	<tipos_pgto>
+		<tipo_pgto>@</tipo_pgto>
+		<desc_tipo_pgto>LINX GIFT CARD</desc_tipo_pgto>
+		<tipo_a_vista>true</tipo_a_vista>
+		<data_para_transferencia>2003-09-17T19:06:28</data_para_transferencia>
+		<inativo>false</inativo>
+	</tipos_pgto>
+	<tipos_pgto>
+		<tipo_pgto>^</tipo_pgto>
+		<desc_tipo_pgto>ARREDONDAR</desc_tipo_pgto>
+		<tipo_a_vista>true</tipo_a_vista>
+		<data_para_transferencia>2003-09-17T19:06:28</data_para_transferencia>
+		<inativo>false</inativo>
+	</tipos_pgto>
+	<tipos_pgto>
+		<tipo_pgto>&lt;</tipo_pgto>
+		<desc_tipo_pgto>RECARGA DE CELULAR</desc_tipo_pgto>
+		<tipo_a_vista>true</tipo_a_vista>
+		<data_para_transferencia>2003-09-17T19:06:28</data_para_transferencia>
+		<inativo>false</inativo>
+	</tipos_pgto>	
+</VFPData>

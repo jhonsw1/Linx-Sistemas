@@ -1,0 +1,29 @@
+<?xml version = "1.0" encoding="Windows-1252" standalone="yes"?>
+<VFPData>
+	<xsd:schema id="VFPData" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="VFPData" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="lj_perfil_usuario" minOccurs="0" maxOccurs="unbounded">
+						<xsd:complexType>
+							<xsd:attribute name="id_perfil" type="xsd:int" use="required"/>
+							<xsd:attribute name="nome_perfil" use="required">
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:string">
+										<xsd:maxLength value="100"/>
+									</xsd:restriction>
+								</xsd:simpleType>
+							</xsd:attribute>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+				<xsd:anyAttribute namespace="http://www.w3.org/XML/1998/namespace" processContents="lax"/>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<lj_perfil_usuario id_perfil="1" nome_perfil="GERENTE DA LOJA"/>
+	<lj_perfil_usuario id_perfil="2" nome_perfil="GERENTE DO PERÍODO"/>
+	<lj_perfil_usuario id_perfil="3" nome_perfil="CAIXA"/>
+	<lj_perfil_usuario id_perfil="4" nome_perfil="VENDEDOR"/>
+	<lj_perfil_usuario id_perfil="5" nome_perfil="ESTOQUISTA"/>
+</VFPData>

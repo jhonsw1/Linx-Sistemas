@@ -1,0 +1,700 @@
+<?xml version = "1.0" encoding="Windows-1252" standalone="yes"?>
+<VFPData>
+	<xsd:schema id="VFPData" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="VFPData" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="banco" minOccurs="0" maxOccurs="unbounded">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="banco">
+									<xsd:simpleType>
+										<xsd:restriction base="xsd:string">
+											<xsd:maxLength value="3"/>
+										</xsd:restriction>
+									</xsd:simpleType>
+								</xsd:element>
+								<xsd:element name="nome_banco">
+									<xsd:simpleType>
+										<xsd:restriction base="xsd:string">
+											<xsd:maxLength value="80"/>
+										</xsd:restriction>
+									</xsd:simpleType>
+								</xsd:element>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+				<xsd:anyAttribute namespace="http://www.w3.org/XML/1998/namespace" processContents="lax"/>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<banco>
+		<banco>246</banco>
+		<nome_banco>Banco ABC Brasil S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>356</banco>
+		<nome_banco>Banco ABN AMRO Real S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>025</banco>
+		<nome_banco>Banco Alfa S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>000</banco>
+		<nome_banco>Banco American Express S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>230</banco>
+		<nome_banco>Banco Bandeirantes S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>028</banco>
+		<nome_banco>Banco Baneb S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>029</banco>
+		<nome_banco>Banco Banerj S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>038</banco>
+		<nome_banco>Banco Banestado S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>719</banco>
+		<nome_banco>Banco Banif Primus S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>740</banco>
+		<nome_banco>Banco Barclays S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>107</banco>
+		<nome_banco>Banco BBM S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>291</banco>
+		<nome_banco>Banco BCN S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>031</banco>
+		<nome_banco>Banco Beg S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>048</banco>
+		<nome_banco>Banco Bemge S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>641</banco>
+		<nome_banco>Banco Bilbao Vizcaya Argentaria Brasil S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>394</banco>
+		<nome_banco>Banco BMC S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>318</banco>
+		<nome_banco>Banco BMG S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>116</banco>
+		<nome_banco>Banco BNL do Brasil S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>752</banco>
+		<nome_banco>Banco BNP Paribas Brasil S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>248</banco>
+		<nome_banco>Banco Boavista Interatlântico S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>237</banco>
+		<nome_banco>Banco Bradesco S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>225</banco>
+		<nome_banco>Banco Brascan S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>263</banco>
+		<nome_banco>Banco Cacique S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>040</banco>
+		<nome_banco>Banco Cargill S.A.  Não possui site</nome_banco>
+	</banco>
+	<banco>
+		<banco>745</banco>
+		<nome_banco>Banco Citibank S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>215</banco>
+		<nome_banco>Banco Comercial e de Investimento Sudameris S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>756</banco>
+		<nome_banco>Banco Cooperativo do Brasil S.A. - BANCOOB</nome_banco>
+	</banco>
+	<banco>
+		<banco>748</banco>
+		<nome_banco>Banco Cooperativo Sicredi S.A. - BANSICREDI</nome_banco>
+	</banco>
+	<banco>
+		<banco>222</banco>
+		<nome_banco>Banco Credit Lyonnais Brasil S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>505</banco>
+		<nome_banco>Banco Credit Suisse First Boston S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>003</banco>
+		<nome_banco>Banco da Amazônia S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>707</banco>
+		<nome_banco>Banco Daycoval S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>240</banco>
+		<nome_banco>Banco de Crédito Real de Minas Gerais S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>494</banco>
+		<nome_banco>Banco de La Republica Oriental del Uruguay  Não possui site</nome_banco>
+	</banco>
+	<banco>
+		<banco>000</banco>
+		<nome_banco>Banco de Lage Landen Financial Services Brasil S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>024</banco>
+		<nome_banco>Banco de Pernambuco S.A. - BANDEPE</nome_banco>
+	</banco>
+	<banco>
+		<banco>456</banco>
+		<nome_banco>Banco de Tokyo-Mitsubishi Brasil S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>214</banco>
+		<nome_banco>Banco Dibens S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>001</banco>
+		<nome_banco>Banco do Brasil S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>027</banco>
+		<nome_banco>Banco do Estado de Santa Catarina S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>033</banco>
+		<nome_banco>Banco do Estado de São Paulo S.A. - Banespa</nome_banco>
+	</banco>
+	<banco>
+		<banco>047</banco>
+		<nome_banco>Banco do Estado de Sergipe S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>036</banco>
+		<nome_banco>Banco do Estado do Maranhão S.A. - BEM</nome_banco>
+	</banco>
+	<banco>
+		<banco>037</banco>
+		<nome_banco>Banco do Estado do Pará S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>041</banco>
+		<nome_banco>Banco do Estado do Rio Grande do Sul S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>004</banco>
+		<nome_banco>Banco do Nordeste do Brasil S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>265</banco>
+		<nome_banco>Banco Fator S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>224</banco>
+		<nome_banco>Banco Fibra S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>626</banco>
+		<nome_banco>Banco Ficsa S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>175</banco>
+		<nome_banco>Banco Finasa S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>252</banco>
+		<nome_banco>Banco Fininvest S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>233</banco>
+		<nome_banco>Banco GE Capital S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>734</banco>
+		<nome_banco>Banco Gerdau S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>612</banco>
+		<nome_banco>Banco Guanabara S.A.  Não possui site</nome_banco>
+	</banco>
+	<banco>
+		<banco>604</banco>
+		<nome_banco>Banco Industrial do Brasil S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>320</banco>
+		<nome_banco>Banco Industrial e Comercial S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>653</banco>
+		<nome_banco>Banco Indusval S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>204</banco>
+		<nome_banco>Banco Inter American Express S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>630</banco>
+		<nome_banco>Banco Intercap S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>249</banco>
+		<nome_banco>Banco Investcred Unibanco S.A.  Não possui site</nome_banco>
+	</banco>
+	<banco>
+		<banco>184</banco>
+		<nome_banco>Banco Itaú BBA S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>652</banco>
+		<nome_banco>Banco Itaú Holding Financeira S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>341</banco>
+		<nome_banco>Banco Itaú S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>376</banco>
+		<nome_banco>Banco J. P. Morgan S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>042</banco>
+		<nome_banco>Banco J. Safra S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>757</banco>
+		<nome_banco>Banco KEB do Brasil S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>000</banco>
+		<nome_banco>Banco Lloyds TSB S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>600</banco>
+		<nome_banco>Banco Luso Brasileiro S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>243</banco>
+		<nome_banco>Banco Máxima S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>392</banco>
+		<nome_banco>Banco Mercantil de São Paulo S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>389</banco>
+		<nome_banco>Banco Mercantil do Brasil S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>755</banco>
+		<nome_banco>Banco Merrill Lynch de Investimentos S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>151</banco>
+		<nome_banco>Banco Nossa Caixa S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>045</banco>
+		<nome_banco>Banco Opportunity S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>208</banco>
+		<nome_banco>Banco Pactual S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>623</banco>
+		<nome_banco>Banco Panamericano S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>611</banco>
+		<nome_banco>Banco Paulista S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>643</banco>
+		<nome_banco>Banco Pine S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>747</banco>
+		<nome_banco>Banco Rabobank International Brasil S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>633</banco>
+		<nome_banco>Banco Rendimento S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>205</banco>
+		<nome_banco>Banco Rural Mais S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>453</banco>
+		<nome_banco>Banco Rural S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>422</banco>
+		<nome_banco>Banco Safra S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>353</banco>
+		<nome_banco>Banco Santander Brasil S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>008</banco>
+		<nome_banco>Banco Santander Meridional S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>351</banco>
+		<nome_banco>Banco Santander S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>702</banco>
+		<nome_banco>Banco Santos S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>250</banco>
+		<nome_banco>Banco Schahin S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>749</banco>
+		<nome_banco>Banco Simples S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>366</banco>
+		<nome_banco>Banco Société Générale Brasil S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>637</banco>
+		<nome_banco>Banco Sofisa S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>347</banco>
+		<nome_banco>Banco Sudameris Brasil S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>464</banco>
+		<nome_banco>Banco Sumitomo Mitsui Brasileiro S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>634</banco>
+		<nome_banco>Banco Triângulo S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>247</banco>
+		<nome_banco>Banco UBS S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>493</banco>
+		<nome_banco>Banco Union - Brasil S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>496</banco>
+		<nome_banco>Banco Uno - E Brasil S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>655</banco>
+		<nome_banco>Banco Votorantim S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>610</banco>
+		<nome_banco>Banco VR S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>370</banco>
+		<nome_banco>Banco Westlb do Brasil S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>219</banco>
+		<nome_banco>Banco Zogbi S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>062</banco>
+		<nome_banco>Banco1.Net S.A</nome_banco>
+	</banco>
+	<banco>
+		<banco>021</banco>
+		<nome_banco>BANESTES S.A. Banco do Estado do Espírito Santo</nome_banco>
+	</banco>
+	<banco>
+		<banco>148</banco>
+		<nome_banco>Bank of America - Brasil S.A. (Banco Múltiplo)</nome_banco>
+	</banco>
+	<banco>
+		<banco>479</banco>
+		<nome_banco>BankBoston Banco Múltiplo S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>744</banco>
+		<nome_banco>BankBoston N.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>000</banco>
+		<nome_banco>BES Investimento do Brasil S.A. - Banco de Investimento</nome_banco>
+	</banco>
+	<banco>
+		<banco>070</banco>
+		<nome_banco>BRB - Banco de Brasília S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>104</banco>
+		<nome_banco>Caixa Econômica Federal</nome_banco>
+	</banco>
+	<banco>
+		<banco>477</banco>
+		<nome_banco>Citibank N.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>487</banco>
+		<nome_banco>Deutsche Bank S.A. - Banco Alemão</nome_banco>
+	</banco>
+	<banco>
+		<banco>751</banco>
+		<nome_banco>Dresdner Bank Brasil S.A. - Banco Múltiplo</nome_banco>
+	</banco>
+	<banco>
+		<banco>210</banco>
+		<nome_banco>Dresdner Bank Lateinamerika Aktiengesellschaft</nome_banco>
+	</banco>
+	<banco>
+		<banco>399</banco>
+		<nome_banco>HSBC Bank Brasil S.A. - Banco Múltiplo</nome_banco>
+	</banco>
+	<banco>
+		<banco>492</banco>
+		<nome_banco>ING Bank N.V.</nome_banco>
+	</banco>
+	<banco>
+		<banco>488</banco>
+		<nome_banco>JPMorgan Chase Bank</nome_banco>
+	</banco>
+	<banco>
+		<banco>065</banco>
+		<nome_banco>Lemon Bank Banco Múltiplo S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>472</banco>
+		<nome_banco>Lloyds TSB Bank PLC.</nome_banco>
+	</banco>
+	<banco>
+		<banco>254</banco>
+		<nome_banco>Paraná Banco S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>409</banco>
+		<nome_banco>UNIBANCO - União de Bancos Brasileiros S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>654</banco>
+		<nome_banco>Banco A.J.Renner S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>000</banco>
+		<nome_banco>Banco AGF S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>213</banco>
+		<nome_banco>Banco Arbi S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>739</banco>
+		<nome_banco>Banco BGN S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>218</banco>
+		<nome_banco>Banco Bonsucesso S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>000</banco>
+		<nome_banco>Banco BRJ S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>044</banco>
+		<nome_banco>Banco BVA S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>412</banco>
+		<nome_banco>Banco Capital S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>266</banco>
+		<nome_banco>Banco Cédula S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>241</banco>
+		<nome_banco>Banco Clássico S.A.  Não possui site</nome_banco>
+	</banco>
+	<banco>
+		<banco>000</banco>
+		<nome_banco>Banco CNH Capital S.A.  Não possui site</nome_banco>
+	</banco>
+	<banco>
+		<banco>753</banco>
+		<nome_banco>Banco Comercial Uruguai S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>721</banco>
+		<nome_banco>Banco Credibel S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>229</banco>
+		<nome_banco>Banco Cruzeiro do Sul S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>000</banco>
+		<nome_banco>Banco Daimlerchrysler S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>300</banco>
+		<nome_banco>Banco de La Nacion Argentina  Não possui site</nome_banco>
+	</banco>
+	<banco>
+		<banco>495</banco>
+		<nome_banco>Banco de La Provincia de Buenos Aires  Não possui site</nome_banco>
+	</banco>
+	<banco>
+		<banco>035</banco>
+		<nome_banco>Banco do Estado do Ceará S.A. - BEC</nome_banco>
+	</banco>
+	<banco>
+		<banco>039</banco>
+		<nome_banco>Banco do Estado do Piauí S.A. - BEP</nome_banco>
+	</banco>
+	<banco>
+		<banco>743</banco>
+		<nome_banco>Banco Emblema S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>000</banco>
+		<nome_banco>Banco Fiat S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>000</banco>
+		<nome_banco>Banco Ford S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>000</banco>
+		<nome_banco>Banco General Motors S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>000</banco>
+		<nome_banco>Banco Honda S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>063</banco>
+		<nome_banco>Banco Ibi S.A. Banco Múltiplo  Não possui site</nome_banco>
+	</banco>
+	<banco>
+		<banco>217</banco>
+		<nome_banco>Banco John Deere S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>212</banco>
+		<nome_banco>Banco Matone S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>000</banco>
+		<nome_banco>Banco Maxinvest S.A.  Não possui site</nome_banco>
+	</banco>
+	<banco>
+		<banco>746</banco>
+		<nome_banco>Banco Modal S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>738</banco>
+		<nome_banco>Banco Morada S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>066</banco>
+		<nome_banco>Banco Morgan Stanley Dean Witter S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>000</banco>
+		<nome_banco>Banco OK de Investimentos S.A.  Não possui site</nome_banco>
+	</banco>
+	<banco>
+		<banco>000</banco>
+		<nome_banco>Banco Ourinvest S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>650</banco>
+		<nome_banco>Banco Pebb S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>613</banco>
+		<nome_banco>Banco Pecúnia S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>724</banco>
+		<nome_banco>Banco Porto Seguro S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>735</banco>
+		<nome_banco>Banco Pottencial S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>638</banco>
+		<nome_banco>Banco Prosper S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>000</banco>
+		<nome_banco>Banco PSA Finance Brasil S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>000</banco>
+		<nome_banco>Banco Rede S.A.  Não possui site</nome_banco>
+	</banco>
+	<banco>
+		<banco>741</banco>
+		<nome_banco>Banco Ribeirão Preto S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>000</banco>
+		<nome_banco>Banco Sterling S.A.  Não possui site</nome_banco>
+	</banco>
+	<banco>
+		<banco>000</banco>
+		<nome_banco>Banco Toyota do Brasil S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>000</banco>
+		<nome_banco>Banco Tricury S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>000</banco>
+		<nome_banco>Banco Volkswagen S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>000</banco>
+		<nome_banco>Banco Volvo (Brasil) S.A.</nome_banco>
+	</banco>
+	<banco>
+		<banco>064</banco>
+		<nome_banco>Goldman Sachs do Brasil Banco Múltiplo S.A.</nome_banco>
+	</banco>
+</VFPData>

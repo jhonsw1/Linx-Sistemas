@@ -1,0 +1,195 @@
+<?xml version = "1.0" encoding="Windows-1252" standalone="yes"?>
+<VFPData>
+	<xsd:schema id="VFPData" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="VFPData" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="lj_perfil_transacao" minOccurs="0" maxOccurs="unbounded">
+						<xsd:complexType>
+							<xsd:attribute name="id_perfil" type="xsd:int" use="required"/>
+							<xsd:attribute name="id_transacao" type="xsd:int" use="required"/>
+							<xsd:attribute name="acesso_especial" type="xsd:boolean" use="required"/>
+							<xsd:attribute name="acesso_bloqueado" type="xsd:boolean" use="required"/>
+							<xsd:attribute name="incluir" type="xsd:boolean" use="required"/>
+							<xsd:attribute name="alterar" type="xsd:boolean" use="required"/>
+							<xsd:attribute name="excluir" type="xsd:boolean" use="required"/>
+							<xsd:attribute name="pesquisar" type="xsd:boolean" use="required"/>
+							<xsd:attribute name="imprimir" type="xsd:boolean" use="required"/>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+				<xsd:anyAttribute namespace="http://www.w3.org/XML/1998/namespace" processContents="lax"/>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<lj_perfil_transacao id_perfil="1" id_transacao="79" acesso_especial="true" acesso_bloqueado="false" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="1" id_transacao="80" acesso_especial="true" acesso_bloqueado="false" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="1" id_transacao="81" acesso_especial="true" acesso_bloqueado="false" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="1" id_transacao="82" acesso_especial="true" acesso_bloqueado="false" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="1" id_transacao="83" acesso_especial="true" acesso_bloqueado="false" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="1" id_transacao="84" acesso_especial="true" acesso_bloqueado="false" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="1" id_transacao="85" acesso_especial="true" acesso_bloqueado="false" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="1" id_transacao="86" acesso_especial="true" acesso_bloqueado="false" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="1" id_transacao="87" acesso_especial="true" acesso_bloqueado="false" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="1" id_transacao="90" acesso_especial="true" acesso_bloqueado="false" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="2" id_transacao="79" acesso_especial="true" acesso_bloqueado="false" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="2" id_transacao="80" acesso_especial="true" acesso_bloqueado="false" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="2" id_transacao="81" acesso_especial="true" acesso_bloqueado="false" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="2" id_transacao="82" acesso_especial="true" acesso_bloqueado="false" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="2" id_transacao="83" acesso_especial="true" acesso_bloqueado="false" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="2" id_transacao="84" acesso_especial="true" acesso_bloqueado="false" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="2" id_transacao="85" acesso_especial="true" acesso_bloqueado="false" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="2" id_transacao="86" acesso_especial="true" acesso_bloqueado="false" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="2" id_transacao="87" acesso_especial="true" acesso_bloqueado="false" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="2" id_transacao="90" acesso_especial="true" acesso_bloqueado="false" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="3" id_transacao="2" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="3" id_transacao="3" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="3" id_transacao="5" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="3" id_transacao="6" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="3" id_transacao="9" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="3" id_transacao="10" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="3" id_transacao="11" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="3" id_transacao="15" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="3" id_transacao="20" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="3" id_transacao="21" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="3" id_transacao="86" acesso_especial="true" acesso_bloqueado="false" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="2" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="3" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="4" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="5" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="9" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="10" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="11" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="12" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="13" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="14" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="15" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="17" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="18" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="19" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="20" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="21" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="23" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="24" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="25" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="26" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="27" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="28" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="29" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="30" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="31" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="32" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="33" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="34" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="35" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="36" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="37" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="38" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="39" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="40" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="41" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="42" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="43" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="44" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="45" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="46" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="47" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="48" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="49" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="50" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="51" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="52" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="54" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="55" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="57" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="58" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="59" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="60" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="61" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="62" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="63" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="64" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="65" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="66" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="67" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="68" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="69" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="70" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="71" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="72" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="73" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="74" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="75" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="76" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="77" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="4" id_transacao="78" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="1" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="2" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="3" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="4" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="5" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="6" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="9" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="10" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="11" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="15" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="16" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="17" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="18" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="20" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="21" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="22" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="23" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="24" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="25" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="26" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="27" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="28" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="29" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="30" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="31" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="32" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="33" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="34" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="35" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="36" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="37" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="38" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="39" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="40" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="41" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="42" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="46" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="47" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="48" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="49" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="50" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="51" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="52" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="53" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="54" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="55" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="56" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="57" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="58" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="59" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="60" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="61" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="62" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="63" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="64" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="65" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="66" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="67" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="68" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="69" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="70" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="71" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="72" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="73" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="74" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="75" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="76" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="77" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+	<lj_perfil_transacao id_perfil="5" id_transacao="78" acesso_especial="false" acesso_bloqueado="true" incluir="false" alterar="false" excluir="false" pesquisar="false" imprimir="false"/>
+</VFPData>

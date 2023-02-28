@@ -1,0 +1,97 @@
+<?xml version = "1.0" encoding="Windows-1252" standalone="yes"?>
+<VFPData>
+	<xsd:schema id="VFPData" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="VFPData" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="loja_formas_pgto" minOccurs="0" maxOccurs="unbounded">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="cod_forma_pgto">
+									<xsd:simpleType>
+										<xsd:restriction base="xsd:string">
+											<xsd:maxLength value="2"/>
+										</xsd:restriction>
+									</xsd:simpleType>
+								</xsd:element>
+								<xsd:element name="forma_pgto">
+									<xsd:simpleType>
+										<xsd:restriction base="xsd:string">
+											<xsd:maxLength value="40"/>
+										</xsd:restriction>
+									</xsd:simpleType>
+								</xsd:element>
+								<xsd:element name="data_criacao" type="xsd:dateTime" minOccurs="0"/>
+								<xsd:element name="permite_alterar" type="xsd:boolean"/>
+								<xsd:element name="ativar_em" type="xsd:dateTime" minOccurs="0"/>
+								<xsd:element name="desativar_em" type="xsd:dateTime" minOccurs="0"/>
+								<xsd:element name="valor_minimo" minOccurs="0">
+									<xsd:simpleType>
+										<xsd:restriction base="xsd:decimal">
+											<xsd:totalDigits value="15"/>
+											<xsd:fractionDigits value="2"/>
+										</xsd:restriction>
+									</xsd:simpleType>
+								</xsd:element>
+								<xsd:element name="valor_maximo" minOccurs="0">
+									<xsd:simpleType>
+										<xsd:restriction base="xsd:decimal">
+											<xsd:totalDigits value="15"/>
+											<xsd:fractionDigits value="2"/>
+										</xsd:restriction>
+									</xsd:simpleType>
+								</xsd:element>
+								<xsd:element name="venc_relativo" type="xsd:dateTime" minOccurs="0"/>
+								<xsd:element name="desconto_por_item" type="xsd:int"/>
+								<xsd:element name="parcelas_cartao_inicial" type="xsd:int" minOccurs="0"/>
+								<xsd:element name="data_para_transferencia" type="xsd:dateTime" minOccurs="0"/>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+				<xsd:anyAttribute namespace="http://www.w3.org/XML/1998/namespace" processContents="lax"/>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<loja_formas_pgto>
+		<cod_forma_pgto>##</cod_forma_pgto>
+		<forma_pgto>*** DIGITE AS PARCELAS ***</forma_pgto>
+		<data_criacao>2000-11-07T00:00:00</data_criacao>
+		<permite_alterar>true</permite_alterar>
+		<valor_minimo>.00</valor_minimo>
+		<valor_maximo>.00</valor_maximo>
+		<desconto_por_item>0</desconto_por_item>
+		<parcelas_cartao_inicial>0</parcelas_cartao_inicial>
+		<data_para_transferencia>2003-09-17T19:06:18</data_para_transferencia>
+	</loja_formas_pgto>
+	<loja_formas_pgto>
+		<cod_forma_pgto>$$</cod_forma_pgto>
+		<forma_pgto>DEVOLUÇÃO EM DINHEIRO</forma_pgto>
+		<permite_alterar>false</permite_alterar>
+		<valor_minimo>.00</valor_minimo>
+		<valor_maximo>.00</valor_maximo>
+		<desconto_por_item>0</desconto_por_item>
+		<parcelas_cartao_inicial>0</parcelas_cartao_inicial>
+		<data_para_transferencia>2003-09-17T19:06:18</data_para_transferencia>
+	</loja_formas_pgto>
+	<loja_formas_pgto>
+		<cod_forma_pgto>**</cod_forma_pgto>
+		<forma_pgto>DEVOLUÇÃO EM VALE PRODUTO</forma_pgto>
+		<permite_alterar>false</permite_alterar>
+		<valor_minimo>.00</valor_minimo>
+		<valor_maximo>.00</valor_maximo>
+		<desconto_por_item>0</desconto_por_item>
+		<parcelas_cartao_inicial>0</parcelas_cartao_inicial>
+		<data_para_transferencia>2003-09-17T19:06:18</data_para_transferencia>
+	</loja_formas_pgto>
+	<loja_formas_pgto>
+		<cod_forma_pgto>@_</cod_forma_pgto>
+		<forma_pgto>DEVOLUÇÃO EM LINX GIFT CARD</forma_pgto>
+		<permite_alterar>false</permite_alterar>
+		<valor_minimo>.00</valor_minimo>
+		<valor_maximo>.00</valor_maximo>
+		<desconto_por_item>0</desconto_por_item>
+		<parcelas_cartao_inicial>0</parcelas_cartao_inicial>
+		<data_para_transferencia>2003-09-17T19:06:18</data_para_transferencia>
+	</loja_formas_pgto>
+</VFPData>

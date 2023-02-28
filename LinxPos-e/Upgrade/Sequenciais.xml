@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="Windows-1252" standalone="yes" ?>
+<VFPData>
+	<xsd:schema id="VFPData" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="VFPData" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="sequenciais" minOccurs="0" maxOccurs="unbounded">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="tabela_coluna">
+									<xsd:simpleType>
+										<xsd:restriction base="xsd:string">
+											<xsd:maxLength value="50" />
+										</xsd:restriction>
+									</xsd:simpleType>
+								</xsd:element>
+								<xsd:element name="descricao">
+									<xsd:simpleType>
+										<xsd:restriction base="xsd:string">
+											<xsd:maxLength value="40" />
+										</xsd:restriction>
+									</xsd:simpleType>
+								</xsd:element>
+								<xsd:element name="sequencia">
+									<xsd:simpleType>
+										<xsd:restriction base="xsd:string">
+											<xsd:maxLength value="20" />
+										</xsd:restriction>
+									</xsd:simpleType>
+								</xsd:element>
+								<xsd:element name="tamanho" type="xsd:int" minOccurs="0" />
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+				<xsd:anyAttribute namespace="http://www.w3.org/XML/1998/namespace" processContents="lax" />
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<sequenciais>
+		<tabela_coluna>INVENTARIO.CODIGO_INVENTARIO</tabela_coluna>
+		<descricao>CÓDIGO DO INVENTÁRIO</descricao>
+		<sequencia>00000000</sequencia>
+		<tamanho>8</tamanho>
+	</sequenciais>
+	<sequenciais>
+		<tabela_coluna>LOJA_RESERVA.NUMERO_RESERVA</tabela_coluna>
+		<descricao>NÚMERO DA RESERVA</descricao>
+		<sequencia>00000000</sequencia>
+		<tamanho>8</tamanho>
+	</sequenciais>
+	<sequenciais>
+		<tabela_coluna>LOJA_CAIXA_LOTE.LOTE_REMESSA</tabela_coluna>
+		<descricao>NÚMERO DO LOTE DA REMESSA</descricao>
+		<sequencia>0000000000</sequencia>
+		<tamanho>10</tamanho>
+	</sequenciais>
+</VFPData>
